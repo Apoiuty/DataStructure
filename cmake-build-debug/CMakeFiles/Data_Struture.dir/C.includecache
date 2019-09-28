@@ -1,0 +1,52 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+E:/OneDrive/OneDrive - mail.nwpu.edu.cn/Project/Data_Structure/Linked_List/NodeLib.h
+node.h
+E:/OneDrive/OneDrive - mail.nwpu.edu.cn/Project/Data_Structure/Linked_List/node.h
+
+E:/OneDrive/OneDrive - mail.nwpu.edu.cn/Project/Data_Structure/Linked_List/WangDao2.h
+linkedlist.h
+E:/OneDrive/OneDrive - mail.nwpu.edu.cn/Project/Data_Structure/Linked_List/linkedlist.h
+dNode.h
+E:/OneDrive/OneDrive - mail.nwpu.edu.cn/Project/Data_Structure/Linked_List/dNode.h
+
+E:/OneDrive/OneDrive - mail.nwpu.edu.cn/Project/Data_Structure/Linked_List/dNode.h
+
+E:/OneDrive/OneDrive - mail.nwpu.edu.cn/Project/Data_Structure/Linked_List/linkedlist.h
+node.h
+E:/OneDrive/OneDrive - mail.nwpu.edu.cn/Project/Data_Structure/Linked_List/node.h
+
+E:/OneDrive/OneDrive - mail.nwpu.edu.cn/Project/Data_Structure/Linked_List/node.h
+stdio.h
+-
+stdlib.h
+-
+
+E:/OneDrive/OneDrive - mail.nwpu.edu.cn/Project/Data_Structure/String/String.h
+
+E:/OneDrive/OneDrive - mail.nwpu.edu.cn/Project/Data_Structure/main.c
+stdio.h
+-
+stdlib.h
+-
+time.h
+-
+limits.h
+-
+Linked_List/NodeLib.h
+E:/OneDrive/OneDrive - mail.nwpu.edu.cn/Project/Data_Structure/Linked_List/NodeLib.h
+Linked_List/linkedlist.h
+E:/OneDrive/OneDrive - mail.nwpu.edu.cn/Project/Data_Structure/Linked_List/linkedlist.h
+Linked_List/WangDao2.h
+E:/OneDrive/OneDrive - mail.nwpu.edu.cn/Project/Data_Structure/Linked_List/WangDao2.h
+String/String.h
+E:/OneDrive/OneDrive - mail.nwpu.edu.cn/Project/Data_Structure/String/String.h
+string.h
+-
+
