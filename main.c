@@ -4,16 +4,11 @@
 #include <limits.h>
 #include "Linked_List/NodeLib.h"
 #include "Linked_List/linkedlist.h"
-#include "Linked_List/WangDao2.h"
+#include "Linked_List/WangDao3.h"
 #include "String/String.h"
 #include <string.h>
 
 int main() {
-    Node *a=CreatL(20),*b=CreatL(15);
-    PrintOutL(b);
-    int po = 2;
-    int jj = 25;
-        printf("%d",Find_k(a,25));
-    return 0;
+    printf("%d\n%d", Pn(2, 5), pn(2,5));
 }
 

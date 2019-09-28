@@ -33,6 +33,10 @@ CMakeFiles/Data_Struture.dir/Linked_List/WangDao2.c.obj: ../Linked_List/dNode.h
 CMakeFiles/Data_Struture.dir/Linked_List/WangDao2.c.obj: ../Linked_List/linkedlist.h
 CMakeFiles/Data_Struture.dir/Linked_List/WangDao2.c.obj: ../Linked_List/node.h
 
+CMakeFiles/Data_Struture.dir/Linked_List/WangDao3.c.obj: ../Linked_List/WangDao3.c
+CMakeFiles/Data_Struture.dir/Linked_List/WangDao3.c.obj: ../Linked_List/WangDao3.h
+CMakeFiles/Data_Struture.dir/Linked_List/WangDao3.c.obj: ../Linked_List/dNode.h
+
 CMakeFiles/Data_Struture.dir/Linked_List/clnkqueue.c.obj: ../Linked_List/clnkqueue.c
 CMakeFiles/Data_Struture.dir/Linked_List/clnkqueue.c.obj: ../Linked_List/clnkqueue.h
 
@@ -63,8 +67,7 @@ CMakeFiles/Data_Struture.dir/String/String.c.obj: ../String/String.c
 CMakeFiles/Data_Struture.dir/String/String.c.obj: ../String/String.h
 
 CMakeFiles/Data_Struture.dir/main.c.obj: ../Linked_List/NodeLib.h
-CMakeFiles/Data_Struture.dir/main.c.obj: ../Linked_List/WangDao2.h
-CMakeFiles/Data_Struture.dir/main.c.obj: ../Linked_List/dNode.h
+CMakeFiles/Data_Struture.dir/main.c.obj: ../Linked_List/WangDao3.h
 CMakeFiles/Data_Struture.dir/main.c.obj: ../Linked_List/linkedlist.h
 CMakeFiles/Data_Struture.dir/main.c.obj: ../Linked_List/node.h
 CMakeFiles/Data_Struture.dir/main.c.obj: ../String/String.h

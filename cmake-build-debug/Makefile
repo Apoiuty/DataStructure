@@ -338,6 +338,33 @@ Linked_List/WangDao2.c.s:
 	$(MAKE) -f CMakeFiles\Data_Struture.dir\build.make CMakeFiles/Data_Struture.dir/Linked_List/WangDao2.c.s
 .PHONY : Linked_List/WangDao2.c.s
 
+Linked_List/WangDao3.obj: Linked_List/WangDao3.c.obj
+
+.PHONY : Linked_List/WangDao3.obj
+
+# target to build an object file
+Linked_List/WangDao3.c.obj:
+	$(MAKE) -f CMakeFiles\Data_Struture.dir\build.make CMakeFiles/Data_Struture.dir/Linked_List/WangDao3.c.obj
+.PHONY : Linked_List/WangDao3.c.obj
+
+Linked_List/WangDao3.i: Linked_List/WangDao3.c.i
+
+.PHONY : Linked_List/WangDao3.i
+
+# target to preprocess a source file
+Linked_List/WangDao3.c.i:
+	$(MAKE) -f CMakeFiles\Data_Struture.dir\build.make CMakeFiles/Data_Struture.dir/Linked_List/WangDao3.c.i
+.PHONY : Linked_List/WangDao3.c.i
+
+Linked_List/WangDao3.s: Linked_List/WangDao3.c.s
+
+.PHONY : Linked_List/WangDao3.s
+
+# target to generate assembly for a file
+Linked_List/WangDao3.c.s:
+	$(MAKE) -f CMakeFiles\Data_Struture.dir\build.make CMakeFiles/Data_Struture.dir/Linked_List/WangDao3.c.s
+.PHONY : Linked_List/WangDao3.c.s
+
 Linked_List/clnkqueue.obj: Linked_List/clnkqueue.c.obj
 
 .PHONY : Linked_List/clnkqueue.obj
@@ -614,6 +641,9 @@ help:
 	@echo ... Linked_List/WangDao2.obj
 	@echo ... Linked_List/WangDao2.i
 	@echo ... Linked_List/WangDao2.s
+	@echo ... Linked_List/WangDao3.obj
+	@echo ... Linked_List/WangDao3.i
+	@echo ... Linked_List/WangDao3.s
 	@echo ... Linked_List/clnkqueue.obj
 	@echo ... Linked_List/clnkqueue.i
 	@echo ... Linked_List/clnkqueue.s

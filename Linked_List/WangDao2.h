@@ -74,5 +74,6 @@ FNode * Locate(FNode *head, int x);
 
 //寻找倒数第k位置的链表元素
 int Find_k(Node *head, int k);
+
 #endif //DATA_STRUCTURE_WANGDAO2_H
 
