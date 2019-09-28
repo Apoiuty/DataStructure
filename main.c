@@ -10,7 +10,6 @@
 
 int main() {
     Node *a=CreatL(20),*b=CreatL(15);
-    PrintOutL(a);
     PrintOutL(b);
     int po = 2;
     int jj = 25;
