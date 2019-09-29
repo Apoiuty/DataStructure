@@ -20,6 +20,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "E:/OneDrive/OneDrive - mail.nwpu.edu.cn/Project/Data_Structure/Linked_List/linkedlist.c" "E:/OneDrive/OneDrive - mail.nwpu.edu.cn/Project/Data_Structure/cmake-build-debug/CMakeFiles/Data_Struture.dir/Linked_List/linkedlist.c.obj"
   "E:/OneDrive/OneDrive - mail.nwpu.edu.cn/Project/Data_Structure/Linked_List/linkedqueue.c" "E:/OneDrive/OneDrive - mail.nwpu.edu.cn/Project/Data_Structure/cmake-build-debug/CMakeFiles/Data_Struture.dir/Linked_List/linkedqueue.c.obj"
   "E:/OneDrive/OneDrive - mail.nwpu.edu.cn/Project/Data_Structure/Linked_List/node.c" "E:/OneDrive/OneDrive - mail.nwpu.edu.cn/Project/Data_Structure/cmake-build-debug/CMakeFiles/Data_Struture.dir/Linked_List/node.c.obj"
+  "E:/OneDrive/OneDrive - mail.nwpu.edu.cn/Project/Data_Structure/Sort/sort.c" "E:/OneDrive/OneDrive - mail.nwpu.edu.cn/Project/Data_Structure/cmake-build-debug/CMakeFiles/Data_Struture.dir/Sort/sort.c.obj"
   "E:/OneDrive/OneDrive - mail.nwpu.edu.cn/Project/Data_Structure/String/String.c" "E:/OneDrive/OneDrive - mail.nwpu.edu.cn/Project/Data_Structure/cmake-build-debug/CMakeFiles/Data_Struture.dir/String/String.c.obj"
   "E:/OneDrive/OneDrive - mail.nwpu.edu.cn/Project/Data_Structure/main.c" "E:/OneDrive/OneDrive - mail.nwpu.edu.cn/Project/Data_Structure/cmake-build-debug/CMakeFiles/Data_Struture.dir/main.c.obj"
   )

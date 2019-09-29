@@ -15,6 +15,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Data_Struture.dir/Linked_List/linkedlist.c.obj"
   "CMakeFiles/Data_Struture.dir/Linked_List/linkedqueue.c.obj"
   "CMakeFiles/Data_Struture.dir/Linked_List/node.c.obj"
+  "CMakeFiles/Data_Struture.dir/Sort/sort.c.obj"
   "CMakeFiles/Data_Struture.dir/String/String.c.obj"
   "CMakeFiles/Data_Struture.dir/main.c.obj"
   "Data_Struture.exe"

@@ -170,6 +170,12 @@
 		<Unit filename="E:/OneDrive/OneDrive - mail.nwpu.edu.cn/Project/Data_Structure/Linked_List/node.h">
 			<Option target="Data_Struture"/>
 		</Unit>
+		<Unit filename="E:/OneDrive/OneDrive - mail.nwpu.edu.cn/Project/Data_Structure/Sort/sort.c">
+			<Option target="Data_Struture"/>
+		</Unit>
+		<Unit filename="E:/OneDrive/OneDrive - mail.nwpu.edu.cn/Project/Data_Structure/Sort/sort.h">
+			<Option target="Data_Struture"/>
+		</Unit>
 		<Unit filename="E:/OneDrive/OneDrive - mail.nwpu.edu.cn/Project/Data_Structure/String/String.c">
 			<Option target="Data_Struture"/>
 		</Unit>

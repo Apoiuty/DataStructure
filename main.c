@@ -1,14 +1,12 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-#include <limits.h>
-#include "Linked_List/NodeLib.h"
-#include "Linked_List/linkedlist.h"
-#include "Linked_List/WangDao3.h"
-#include "String/String.h"
-#include <string.h>
+#include "Sort/sort.h"
 
 int main() {
-    printf("%d\n%d", Pn(2, 5), pn(2,5));
-   return 0; }
+    ForSort A[10];
+    Initialization(A, 10);
+
+    DirectInsertionSort(A, 10);
+    PrintSorted(A, 10);
+    return 0;
+
+}
 

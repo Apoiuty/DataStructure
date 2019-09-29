@@ -554,6 +554,33 @@ Linked_List/node.c.s:
 	$(MAKE) -f CMakeFiles\Data_Struture.dir\build.make CMakeFiles/Data_Struture.dir/Linked_List/node.c.s
 .PHONY : Linked_List/node.c.s
 
+Sort/sort.obj: Sort/sort.c.obj
+
+.PHONY : Sort/sort.obj
+
+# target to build an object file
+Sort/sort.c.obj:
+	$(MAKE) -f CMakeFiles\Data_Struture.dir\build.make CMakeFiles/Data_Struture.dir/Sort/sort.c.obj
+.PHONY : Sort/sort.c.obj
+
+Sort/sort.i: Sort/sort.c.i
+
+.PHONY : Sort/sort.i
+
+# target to preprocess a source file
+Sort/sort.c.i:
+	$(MAKE) -f CMakeFiles\Data_Struture.dir\build.make CMakeFiles/Data_Struture.dir/Sort/sort.c.i
+.PHONY : Sort/sort.c.i
+
+Sort/sort.s: Sort/sort.c.s
+
+.PHONY : Sort/sort.s
+
+# target to generate assembly for a file
+Sort/sort.c.s:
+	$(MAKE) -f CMakeFiles\Data_Struture.dir\build.make CMakeFiles/Data_Struture.dir/Sort/sort.c.s
+.PHONY : Sort/sort.c.s
+
 String/String.obj: String/String.c.obj
 
 .PHONY : String/String.obj
@@ -665,6 +692,9 @@ help:
 	@echo ... Linked_List/node.obj
 	@echo ... Linked_List/node.i
 	@echo ... Linked_List/node.s
+	@echo ... Sort/sort.obj
+	@echo ... Sort/sort.i
+	@echo ... Sort/sort.s
 	@echo ... String/String.obj
 	@echo ... String/String.i
 	@echo ... String/String.s
