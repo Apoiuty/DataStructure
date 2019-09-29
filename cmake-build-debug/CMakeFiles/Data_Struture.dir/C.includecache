@@ -6,6 +6,16 @@
 
 #IncludeRegexTransform: 
 
+E:/OneDrive/OneDrive - mail.nwpu.edu.cn/Project/Data_Structure/Sort/sort.c
+stdlib.h
+-
+sort.h
+E:/OneDrive/OneDrive - mail.nwpu.edu.cn/Project/Data_Structure/Sort/sort.h
+stdio.h
+-
+time.h
+-
+
 E:/OneDrive/OneDrive - mail.nwpu.edu.cn/Project/Data_Structure/Sort/sort.h
 
 E:/OneDrive/OneDrive - mail.nwpu.edu.cn/Project/Data_Structure/main.c
