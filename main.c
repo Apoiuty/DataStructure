@@ -10,5 +10,5 @@
 
 int main() {
     printf("%d\n%d", Pn(2, 5), pn(2,5));
-    return 0;}
+    }
 
