@@ -8,6 +8,14 @@ typedef struct forSort {
     int data;
 }ForSort;
 
+//基数排序数据结构, 假设排序码有三位
+struct RSort{
+    int key[3];
+    struct Rsort *next;
+};
+
+typedef struct Rsort rsort;
+
 //初始化记录
 void Initialization(ForSort A[],int n);
 
@@ -24,4 +32,9 @@ void BinaryInsertSort(ForSort A[], int n);
 //选择排序
 void DirectSelection(ForSort A[],int n);
 
+//冒泡排序
+void BubbleSort(ForSort A[],int n);
+
+//快速排序
+void QuickSort(ForSort A[], int low,int high);
 #endif //DATA_STRUCTURE_SORT_H

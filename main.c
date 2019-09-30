@@ -1,12 +1,13 @@
 #include "Sort/sort.h"
 
 int main() {
-    ForSort A[10];
-    Initialization(A, 10);
-    PrintSorted(A, 10);
+    ForSort A[20];
+    Initialization(A, 20);
+    PrintSorted(A, 20);
 
-    DirectSelection(A, 10);
-    PrintSorted(A, 10);
+    QuickSort(A, 0,19);
+    PrintSorted(A, 20);
     return 0;
 }
+
 

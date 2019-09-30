@@ -115,3 +115,60 @@ void DirectSelection(ForSort A[], int n) {
         }
     }
 }
+
+//冒泡排序
+void BubbleSort(ForSort A[], int n) {
+//    A为排序数组, n为数组大小
+    int i, j;
+    int flag;
+    ForSort temp;
+
+    for (i = n - 1, flag = 1; i > 0 && flag; i--) {
+//        清除交换位
+        flag = 0;
+        for (j = 0; j < i; j++) {
+            if (A[j].data > A[j + 1].data) {
+//                交换位置一
+                flag = 1;
+                temp = A[j];
+                A[j] = A[j + 1];
+                A[j + 1] = temp;
+            }
+        }
+    }
+}
+
+//快速排序
+void QuickSort(ForSort A[], int low, int high) {
+//    快速排序
+    int i, j;
+    ForSort temp;
+
+    if (low >= high)
+        return;
+
+    i = low;
+    j = high;
+    temp = A[i];
+    while (i < j) {
+//        找到比A[i]小的换到A[i]的位置
+        while (i < j && A[j].data >= temp.data)
+            j--;
+
+        if (i < j)
+            A[i++] = A[j];
+
+//        找到比A[i]小的换到A[j]的位置
+        while (i < j && A[i].data <= temp.data)
+            i++;
+
+        if (i < j) {
+            A[j--] = A[i];
+        }
+
+    }
+
+    A[i] = temp;
+    QuickSort(A, low, --j);
+    QuickSort(A, ++i, high);
+}
