@@ -15,8 +15,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Sort/sort.c" beforeDir="false" afterPath="$PROJECT_DIR$/Sort/sort.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Sort/sort.h" beforeDir="false" afterPath="$PROJECT_DIR$/Sort/sort.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Data_Struture.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Data_Struture.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Struture.dir/main.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Struture.dir/main.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Struture.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Struture.dir/objects.a" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -75,7 +75,7 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.C/C++" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.smartKeys" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -140,7 +140,7 @@
       <workItem from="1569653866319" duration="273000" />
       <workItem from="1569672453710" duration="3787000" />
       <workItem from="1569736066981" duration="1661000" />
-      <workItem from="1569805052338" duration="7644000" />
+      <workItem from="1569805052338" duration="13452000" />
     </task>
     <task id="LOCAL-00001" summary="折半插入排序;希尔排序;直接选择排序">
       <created>1569755677778</created>
@@ -149,7 +149,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569755677778</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="冒泡排序;&#10;插入排序;">
+      <created>1569816207047</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1569816207047</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,6 +188,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="直接插入排序算法" />
     <MESSAGE value="折半插入排序;希尔排序;直接选择排序" />
-    <option name="LAST_COMMIT_MESSAGE" value="折半插入排序;希尔排序;直接选择排序" />
+    <MESSAGE value="冒泡排序;&#10;插入排序;" />
+    <option name="LAST_COMMIT_MESSAGE" value="冒泡排序;&#10;插入排序;" />
   </component>
 </project>

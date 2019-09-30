@@ -3,6 +3,7 @@
 //
 
 #include <stdlib.h>
+#include <string.h>
 #include "sort.h"
 #include <stdio.h>
 #include <time.h>
@@ -117,8 +118,8 @@ void DirectSelection(ForSort A[], int n) {
 }
 
 //冒泡排序
-void BubbleSort(ForSort A[], int n) {
 //    A为排序数组, n为数组大小
+void BubbleSort(ForSort A[], int n) {
     int i, j;
     int flag;
     ForSort temp;
@@ -171,4 +172,122 @@ void QuickSort(ForSort A[], int low, int high) {
     A[i] = temp;
     QuickSort(A, low, --j);
     QuickSort(A, ++i, high);
+}
+
+//基数排序
+void RadixSort(rsort A[], int low, int high, int d) {
+//    基数排序, low为数据元素最小值, high为最大值, d为数据元素位数
+
+//    r个存储空间
+    typedef struct {
+        rsort *pHead;
+        rsort *pTail;
+    } TempLink;
+
+    int r = high - low + 1;
+    int i, j, k;
+    TempLink *tlink;
+    rsort *p;
+    tlink = (TempLink *) malloc(sizeof(TempLink) * r);
+
+    for (i = d - 1; i >= 0; i--) {
+//        r个数组初始化
+        for (j = 0; j < r; j++) {
+            tlink[j].pHead = tlink[j].pTail = NULL;
+        }
+
+//        将记录分配到r个数组
+        for (p = A; p; p = p->next) {
+            j = p->key[i] - low;
+            if (tlink[j].pHead == NULL) {
+                tlink[j].pHead = tlink[j].pTail = p;
+            } else {
+                tlink[j].pTail->next = p;
+                tlink[j].pTail = p;
+            }
+        }
+
+        j = 0;
+        while (tlink[j].pHead == NULL && j < r) {
+            j++;
+        }
+
+        A = tlink[j].pHead;
+        p = tlink[j].pTail;
+
+        for (k = j + 1; k < r; k++) {
+            if (tlink[j].pHead) {
+                p->next = tlink[k].pHead;
+                p = tlink[k].pTail;
+            }
+            p->next = 0;
+        }
+
+
+    }
+}
+
+//归并排序
+void MergeSort(ForSort *A, int n) {
+    int k;
+    ForSort *B = (ForSort *) malloc(sizeof(ForSort) * n);
+
+    k = 1;
+    while (k < n) {
+//      A中子文件经过一趟合并到B
+        OnePassMerge(B, A, k, n);
+        k = k << 1;
+        if (k < n) {
+            OnePassMerge(A, B, k, n);
+            k <<= 1;
+
+        } else {
+            memcpy(A, B, sizeof(ForSort) * n);
+        }
+    }
+}
+
+/**
+ * 一趟归并函数
+ * @param Dsc 目的
+ * @param Src 源
+ * @param len 子文件长度
+ * @param n 源长度
+ */
+void OnePassMerge(ForSort *Dsc, ForSort *Src, int len, int n) {
+    int i;
+    for (i = 0; i < n - 2 * len; i += 2 * len) {
+        TwoPassMerge(Dsc, Src, i, i + len - 1, i + 2 * len - 1);
+    }
+
+    if (i < n - len) {
+        TwoPassMerge(Dsc, Src, i, i + len - 1, n - 1);
+    } else {
+        memcpy(Dsc, Src, sizeof(n - i));
+    }
+}
+
+/**
+ * 两两归并函数, 将Src中从s到e1和从e1+1到e2的子文件合并到Dsc
+ * @param Dsc 目的
+ * @param Src 源
+ * @param s 第一个开始点
+ * @param e1 第一个结束点
+ * @param e2 第二个开始点
+ */
+void TwoPassMerge(ForSort *Dsc, ForSort *Src, int s, int e1, int e2) {
+    int s1, s2;
+    for (s1 = s, s2 = e1 + 1; s1 <= e1 && s2 <= e2;) {
+        if (Src[s1].data < Src[s2].data) {
+            Dsc[s++] = Src[s1++];
+        } else
+            Dsc[s++] = Src[s2++];
+
+    }
+
+    if (s1 <= e1) {
+        memcpy(Dsc + s, Src + s1, (e1 - s1 + 1) * sizeof(ForSort));
+
+    } else if (s2 <= e2)
+        memcpy(Dsc + s, Src + s2, (e2 - s2 + 1) * sizeof(ForSort));
 }
