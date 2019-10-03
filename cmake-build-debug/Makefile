@@ -554,6 +554,33 @@ Linked_List/node.c.s:
 	$(MAKE) -f CMakeFiles\Data_Struture.dir\build.make CMakeFiles/Data_Struture.dir/Linked_List/node.c.s
 .PHONY : Linked_List/node.c.s
 
+Sort/WangDao7.obj: Sort/WangDao7.c.obj
+
+.PHONY : Sort/WangDao7.obj
+
+# target to build an object file
+Sort/WangDao7.c.obj:
+	$(MAKE) -f CMakeFiles\Data_Struture.dir\build.make CMakeFiles/Data_Struture.dir/Sort/WangDao7.c.obj
+.PHONY : Sort/WangDao7.c.obj
+
+Sort/WangDao7.i: Sort/WangDao7.c.i
+
+.PHONY : Sort/WangDao7.i
+
+# target to preprocess a source file
+Sort/WangDao7.c.i:
+	$(MAKE) -f CMakeFiles\Data_Struture.dir\build.make CMakeFiles/Data_Struture.dir/Sort/WangDao7.c.i
+.PHONY : Sort/WangDao7.c.i
+
+Sort/WangDao7.s: Sort/WangDao7.c.s
+
+.PHONY : Sort/WangDao7.s
+
+# target to generate assembly for a file
+Sort/WangDao7.c.s:
+	$(MAKE) -f CMakeFiles\Data_Struture.dir\build.make CMakeFiles/Data_Struture.dir/Sort/WangDao7.c.s
+.PHONY : Sort/WangDao7.c.s
+
 Sort/sort.obj: Sort/sort.c.obj
 
 .PHONY : Sort/sort.obj
@@ -692,6 +719,9 @@ help:
 	@echo ... Linked_List/node.obj
 	@echo ... Linked_List/node.i
 	@echo ... Linked_List/node.s
+	@echo ... Sort/WangDao7.obj
+	@echo ... Sort/WangDao7.i
+	@echo ... Sort/WangDao7.s
 	@echo ... Sort/sort.obj
 	@echo ... Sort/sort.i
 	@echo ... Sort/sort.s

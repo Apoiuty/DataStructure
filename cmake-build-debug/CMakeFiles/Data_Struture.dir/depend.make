@@ -63,12 +63,17 @@ CMakeFiles/Data_Struture.dir/Linked_List/linkedqueue.c.obj: ../Linked_List/node.
 CMakeFiles/Data_Struture.dir/Linked_List/node.c.obj: ../Linked_List/node.c
 CMakeFiles/Data_Struture.dir/Linked_List/node.c.obj: ../Linked_List/node.h
 
+CMakeFiles/Data_Struture.dir/Sort/WangDao7.c.obj: ../Sort/WangDao7.c
+CMakeFiles/Data_Struture.dir/Sort/WangDao7.c.obj: ../Sort/WangDao7.h
+CMakeFiles/Data_Struture.dir/Sort/WangDao7.c.obj: ../Sort/sort.h
+
 CMakeFiles/Data_Struture.dir/Sort/sort.c.obj: ../Sort/sort.c
 CMakeFiles/Data_Struture.dir/Sort/sort.c.obj: ../Sort/sort.h
 
 CMakeFiles/Data_Struture.dir/String/String.c.obj: ../String/String.c
 CMakeFiles/Data_Struture.dir/String/String.c.obj: ../String/String.h
 
+CMakeFiles/Data_Struture.dir/main.c.obj: ../Sort/WangDao7.h
 CMakeFiles/Data_Struture.dir/main.c.obj: ../Sort/sort.h
 CMakeFiles/Data_Struture.dir/main.c.obj: ../main.c
 
