@@ -3,6 +3,7 @@
 //
 
 #include "sort.h"
+#include "../Linked_List/linkedlist.h"
 #include <stdio.h>
 
 #ifndef DATA_STRUCTURE_WANGDAO7_H
@@ -19,7 +20,7 @@ void TwoDirectionBubble(ForSort *A, int n);
  * @param A 待处理数组
  * @param n 数组大小
  */
-void ChangeOddEven(ForSort A[],int n);
+void ChangeOddEven(ForSort A[], int n);
 
 /**
  * 用快排的方法查找A中第k个元素(从小到大)
@@ -42,4 +43,11 @@ void SetPartition(ForSort A[], int n);
  * @param n 数组大小
  */
 void Flag_Arrange(ForSort A[], int n);
+
+/**
+ * 单链表二路归并
+ * @param head 带头结点的链表
+ */
+void MergeSortL(Node *head, int k);
+
 #endif //DATA_STRUCTURE_WANGDAO7_H

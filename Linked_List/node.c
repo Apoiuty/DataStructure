@@ -2,6 +2,7 @@
 // Created by Apoiuty on 2019/9/1.
 //
 
+#include <time.h>
 #include "node.h"
 
 void InitNode(Node *N, int item, Node *ptr) {

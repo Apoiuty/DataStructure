@@ -169,7 +169,7 @@ Node *CreatL(int n) {
     Node *cur = head, *new;
     for (int i = 0; i < n; ++i) {
         new = (Node *) malloc(sizeof(Node));
-        new->data = i;
+        new->data = rand() % n + 1;
         new->next = NULL;
         cur->next = new;
         cur = new;

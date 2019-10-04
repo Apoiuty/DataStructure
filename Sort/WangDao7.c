@@ -137,18 +137,129 @@ void SetPartition(ForSort A[], int n) {
 void Flag_Arrange(ForSort A[], int n) {
     int head = 0, rear = n - 1;
     struct forSort temp;
-    for (int i = 0; i <=rear; ++i) {
-        switch (A[i].data % 3){
+    for (int i = 0; i <= rear; ++i) {
+        switch (A[i].data % 3) {
             case 0:
-                temp=A[i];
-                A[i]=A[head];
-                A[head++]=temp;
+                temp = A[i];
+                A[i] = A[head];
+                A[head++] = temp;
                 break;
             case 2:
-                temp=A[i];
-                A[i]=A[rear];
-                A[rear--]=temp;
+                temp = A[i];
+                A[i] = A[rear];
+                A[rear--] = temp;
                 break;
         }
     }
+}
+
+/**
+ * 单链表二路归并
+ * @param head 带头结点的链表
+ */
+void MergeSortL(Node *head, int k) {
+    Node *n1, *n2;
+    Node *tHead, *new, *rear;
+    tHead = (Node *) malloc(sizeof(Node));
+//    tHead为临时存储空间
+    tHead->next = NULL;
+    rear = tHead;
+    int i, temp;
+
+//    空表直接退出
+    if (head->next == NULL) {
+        return;
+    }
+
+//    从从开始对链表中所有元素进行二路归并
+    n1 = head->next;
+    while (n1) {
+//        找到n1对应的归并位置
+        n2 = n1;
+        i = 0;
+        while (n2 && i < k) {
+            n2 = n2->next;
+            i++;
+        }
+
+//        归并
+        if (n2) {
+            int j1 = 0, j2 = 0;
+            for (; j2 < k && j1 < k && n2;) {
+                new = (Node *) malloc(sizeof(Node));
+                if (n1->data > n2->data) {
+                    new->data = n2->data;
+                    new->next = NULL;
+                    rear->next = new;
+                    rear = new;
+                    n2 = n2->next;
+                    j2++;
+                } else {
+                    new->data = n1->data;
+                    new->next = NULL;
+                    rear->next = new;
+                    rear = new;
+                    n1 = n1->next;
+                    j1++;
+                }
+            }
+
+//            如果还有剩下的
+
+
+            while (j1 < k) {
+                new = (Node *) malloc(sizeof(Node));
+                new->data = n1->data;
+                new->next = NULL;
+                rear->next = new;
+                rear = new;
+                n1 = n1->next;
+                j1++;
+            }
+
+            while (j2 < k && n2) {
+                new = (Node *) malloc(sizeof(Node));
+                new->data = n2->data;
+                new->next = NULL;
+                rear->next = new;
+                rear = new;
+                n2 = n2->next;
+                j2++;
+            }
+        } else if (n1 == head->next) {
+            return;
+//            k过大,说明已经归并完成
+        }
+
+//        下一组归并
+        i = 0;
+        while (n1 && i < k) {
+            n1 = n1->next;
+            i++;
+        }
+
+    }
+
+//    数据转移
+    n1 = head->next;
+    n2 = tHead->next;
+    while (n1 && n2) {
+        n1->data = n2->data;
+        n1 = n1->next;
+        n2 = n2->next;
+    }
+
+//    释放tHead空间
+    n2 = tHead;
+    while (n2) {
+        n1=n2->next;
+        free(n2);
+        n2 = n1;
+    }
+
+//    归并一趟后增大k
+    k = k * 2;
+    PrintOutL(head);
+    MergeSortL(head, k);
+
 }

@@ -3,11 +3,12 @@
 #include "Sort/WangDao7.h"
 
 int main() {
-    ForSort A[20];
-    Initialization(A, 20);
-    PrintSorted(A, 20);
-    Flag_Arrange(A, 20);
-    PrintSorted(A, 20);
+    Node *head;
+    head = CreatL(10);
+    PrintOutL(head);
+
+    MergeSortL(head, 1);
+    PrintOutL(head);
     return 0;
 }
 
