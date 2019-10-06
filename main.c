@@ -1,15 +1,12 @@
-#include "Sort/sort.h"
 #include <stdio.h>
-#include "Sort/WangDao7.h"
-
+#include "BinaryTree/BinaryTree.h"
 int main() {
-    Node *head;
-    head = CreatL(10);
-    PrintOutL(head);
+    BinaryTree *bt;
+    bt=(BinaryTree *)malloc(sizeof(BinaryTree));
+    InitBinaryTree(bt);
+    MakeTree(bt, NULL, NULL, 0);
 
-    MergeSortL(head, 1);
-    PrintOutL(head);
-    return 0;
+
 }
 
 

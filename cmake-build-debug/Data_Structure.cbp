@@ -74,6 +74,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="E:/OneDrive/OneDrive - mail.nwpu.edu.cn/Project/Data_Structure/BinaryTree/BinaryTree.c">
+			<Option target="Data_Struture"/>
+		</Unit>
+		<Unit filename="E:/OneDrive/OneDrive - mail.nwpu.edu.cn/Project/Data_Structure/BinaryTree/BinaryTree.h">
+			<Option target="Data_Struture"/>
+		</Unit>
 		<Unit filename="E:/OneDrive/OneDrive - mail.nwpu.edu.cn/Project/Data_Structure/Linear_List/list.c">
 			<Option target="Data_Struture"/>
 		</Unit>

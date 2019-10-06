@@ -6,15 +6,31 @@
 
 #IncludeRegexTransform: 
 
-E:/OneDrive/OneDrive - mail.nwpu.edu.cn/Project/Data_Structure/Sort/WangDao7.c
-WangDao7.h
-E:/OneDrive/OneDrive - mail.nwpu.edu.cn/Project/Data_Structure/Sort/WangDao7.h
+E:/OneDrive/OneDrive - mail.nwpu.edu.cn/Project/Data_Structure/Linked_List/linkedlist.h
+node.h
+E:/OneDrive/OneDrive - mail.nwpu.edu.cn/Project/Data_Structure/Linked_List/node.h
+
+E:/OneDrive/OneDrive - mail.nwpu.edu.cn/Project/Data_Structure/Linked_List/node.h
+stdio.h
+-
+stdlib.h
+-
 
 E:/OneDrive/OneDrive - mail.nwpu.edu.cn/Project/Data_Structure/Sort/WangDao7.h
 sort.h
 E:/OneDrive/OneDrive - mail.nwpu.edu.cn/Project/Data_Structure/Sort/sort.h
+../Linked_List/linkedlist.h
+E:/OneDrive/OneDrive - mail.nwpu.edu.cn/Project/Data_Structure/Linked_List/linkedlist.h
 stdio.h
 -
 
 E:/OneDrive/OneDrive - mail.nwpu.edu.cn/Project/Data_Structure/Sort/sort.h
+
+E:/OneDrive/OneDrive - mail.nwpu.edu.cn/Project/Data_Structure/main.c
+Sort/sort.h
+E:/OneDrive/OneDrive - mail.nwpu.edu.cn/Project/Data_Structure/Sort/sort.h
+stdio.h
+-
+Sort/WangDao7.h
+E:/OneDrive/OneDrive - mail.nwpu.edu.cn/Project/Data_Structure/Sort/WangDao7.h
 

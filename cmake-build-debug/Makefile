@@ -122,6 +122,33 @@ Data_Struture/fast:
 	$(MAKE) -f CMakeFiles\Data_Struture.dir\build.make CMakeFiles/Data_Struture.dir/build
 .PHONY : Data_Struture/fast
 
+BinaryTree/BinaryTree.obj: BinaryTree/BinaryTree.c.obj
+
+.PHONY : BinaryTree/BinaryTree.obj
+
+# target to build an object file
+BinaryTree/BinaryTree.c.obj:
+	$(MAKE) -f CMakeFiles\Data_Struture.dir\build.make CMakeFiles/Data_Struture.dir/BinaryTree/BinaryTree.c.obj
+.PHONY : BinaryTree/BinaryTree.c.obj
+
+BinaryTree/BinaryTree.i: BinaryTree/BinaryTree.c.i
+
+.PHONY : BinaryTree/BinaryTree.i
+
+# target to preprocess a source file
+BinaryTree/BinaryTree.c.i:
+	$(MAKE) -f CMakeFiles\Data_Struture.dir\build.make CMakeFiles/Data_Struture.dir/BinaryTree/BinaryTree.c.i
+.PHONY : BinaryTree/BinaryTree.c.i
+
+BinaryTree/BinaryTree.s: BinaryTree/BinaryTree.c.s
+
+.PHONY : BinaryTree/BinaryTree.s
+
+# target to generate assembly for a file
+BinaryTree/BinaryTree.c.s:
+	$(MAKE) -f CMakeFiles\Data_Struture.dir\build.make CMakeFiles/Data_Struture.dir/BinaryTree/BinaryTree.c.s
+.PHONY : BinaryTree/BinaryTree.c.s
+
 Linear_List/list.obj: Linear_List/list.c.obj
 
 .PHONY : Linear_List/list.obj
@@ -671,6 +698,9 @@ help:
 	@echo ... Data_Struture
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... BinaryTree/BinaryTree.obj
+	@echo ... BinaryTree/BinaryTree.i
+	@echo ... BinaryTree/BinaryTree.s
 	@echo ... Linear_List/list.obj
 	@echo ... Linear_List/list.i
 	@echo ... Linear_List/list.s
