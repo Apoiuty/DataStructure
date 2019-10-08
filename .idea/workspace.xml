@@ -12,26 +12,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0783c046-d5ae-4a28-a58d-e007cf605800" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/BinaryTree/BinaryTree.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BinaryTree/BinaryTree.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Struture.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Struture.dir/C.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Struture.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Struture.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Struture.dir/Linked_List/linkedlist.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Struture.dir/Linked_List/linkedlist.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Struture.dir/Linked_List/node.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Struture.dir/Linked_List/node.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Struture.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Struture.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Struture.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Struture.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Struture.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Struture.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Struture.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Struture.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Struture.dir/main.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Struture.dir/main.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Struture.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Struture.dir/objects.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Struture.dir/objects1.rsp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Struture.dir/objects1.rsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Struture.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Struture.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Data_Structure.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Data_Structure.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BinaryTree/BinaryTree.c" beforeDir="false" afterPath="$PROJECT_DIR$/BinaryTree/BinaryTree.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BinaryTree/BinaryTree.h" beforeDir="false" afterPath="$PROJECT_DIR$/BinaryTree/BinaryTree.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Data_Struture.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Data_Struture.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -174,7 +158,8 @@
       <workItem from="1570072984537" duration="4280000" />
       <workItem from="1570079962177" duration="9218000" />
       <workItem from="1570178212593" duration="5555000" />
-      <workItem from="1570345037410" duration="9598000" />
+      <workItem from="1570345037410" duration="10039000" />
+      <workItem from="1570516801469" duration="7243000" />
     </task>
     <task id="LOCAL-00001" summary="折半插入排序;希尔排序;直接选择排序">
       <created>1569755677778</created>
@@ -211,7 +196,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570183097032</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="二叉树的数据结构及递归实现二叉树的遍历算法.">
+      <created>1570359350461</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1570359350461</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -247,7 +239,8 @@
     <MESSAGE value="基数排序;&#10;归并排序;" />
     <MESSAGE value="王道第七章练习" />
     <MESSAGE value="归并排序的链表实现" />
-    <option name="LAST_COMMIT_MESSAGE" value="归并排序的链表实现" />
+    <MESSAGE value="二叉树的数据结构及递归实现二叉树的遍历算法." />
+    <option name="LAST_COMMIT_MESSAGE" value="二叉树的数据结构及递归实现二叉树的遍历算法." />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

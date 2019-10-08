@@ -23,6 +23,13 @@ struct binarytree {
 
 typedef struct binarytree BinaryTree;
 
+//线索化二叉树
+typedef struct threaded_tree {
+    int ltag, rtag;
+    int data;
+    struct threaded_tree *left, *right;
+} ThreadedTree;
+
 /**
  * 二叉树节点初始化函数
  * @param btree 要初始化的节点
@@ -52,7 +59,7 @@ void InitBinaryTree(BinaryTree *bt);
  * @param bt 二叉树
  * @return 逻辑值
  */
-int IsEmpty(BinaryTree *bt);
+int IsEmptyTree(BinaryTree *bt);
 
 /**
  * 返回二叉树根节点的值
@@ -87,5 +94,51 @@ void PostOrder(BinaryTreeNode *root);
  * @param root 根节点
  */
 void InOrder(BinaryTreeNode *root);
+
+/**
+ * 前序遍历二叉树(非递归)
+ * @param root 根节点
+ */
+void NLR(BinaryTreeNode *root);
+
+/**
+ * 对称序遍历二叉树
+ * @param root 根节点
+ */
+void LNR(BinaryTreeNode *root);
+
+/**
+ * 后序遍历二叉树
+ * @param root 根节点
+ */
+void LRN(BinaryTreeNode *root);
+
+/**
+ * 线索化二叉树的中序遍历算法
+ * @param root
+ * @param pre
+ */
+void InorderThreaded(ThreadedTree *root, ThreadedTree **pre);
+
+/**
+ * 返回指定节点的对称后继节点值
+ * @param p 指定节点
+ * @return 后继节点的data
+ */
+int Inordernext(ThreadedTree *p);
+
+/**
+ * 对称序列遍历线索化二叉树
+ * @param root 根节点
+ */
+void ThreadedInTravel(ThreadedTree *root);
+
+
+/**
+ * 在对称序列化二叉树节点p后插入insert
+ * @param p
+ * @param insert
+ */
+void InsertThreadedTree(ThreadedTree *p, ThreadedTree *insert);
 
 #endif //DATA_STRUCTURE_BINARYTREE_H
