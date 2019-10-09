@@ -2,11 +2,27 @@
 #include "BinaryTree/BinaryTree.h"
 
 int main() {
-    int A[10];
-    A[0] = 0, A[1] = 1;
-    int i = 1;
-    printf("%d ", A[i] = A[--i] + 2);
-    printf("\n%d %d", A[1], A[0]);
+    BinaryTreeNode *root = CreatBinaryTreeN(20);
+    PreOrder(root);
+    printf("\n");
+    NLR(root);
+    printf("\n");
+
+    LNR(root);
+    printf("\n");
+    InOrder(root);
+    printf("\n");
+
+    PostOrder(root);
+    printf("\n");
+    PostOrder2(root);
+
+    printf("\n");
+    Inverse_LevelOrder(root);
+
+    printf("\n%d", GetTreeHeight(root));
+
+    return 0;
 
 
 }

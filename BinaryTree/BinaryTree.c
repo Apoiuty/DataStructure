@@ -7,6 +7,7 @@
 
 #define ALLOC_FAIL "Allocation failure.\n"
 #define N 100
+#define null NULL
 
 /**
  * 二叉树节点初始化函数
@@ -173,7 +174,7 @@ void LNR(BinaryTreeNode *root) {
 }
 
 /**
- * 后序遍历二叉树
+ * 后序遍历二叉树(不能用)
  * @param root 根节点
  */
 void LRN(BinaryTreeNode *root) {
@@ -185,22 +186,22 @@ void LRN(BinaryTreeNode *root) {
 
     do {
 //        访问到最左边的节点
-        while (stack[top]) {
+        while (stack[top] != null) {
             stack[++top] = stack[top]->left;
             tag[top] = 0;
         }
 
 //        如果上一节点的右子节点已经输出则打印其节点
         while (tag[top - 1] == 1) {
-            printf("%d", stack[--top]->data);
+            printf("%d ", stack[--top]->data);
 
-            if (top) {
+            if (top > 0) {
                 stack[top] = stack[top - 1]->right;
                 tag[top - 1] = 1;
                 tag[top] = 0;
             }
         }
-    } while (top);
+    } while (top != 0);
 }
 
 /**
@@ -307,4 +308,124 @@ void InsertThreadedTree(ThreadedTree *p, ThreadedTree *insert) {
     if (right_p && right_p->ltag == 1)
         right_p->left = insert;
 
+}
+
+
+/**
+ * 后序遍历算法
+ * 使用一个前序指针指示是否访问了右节点, 从而判断是否输出根节点
+ * @param root 根节点
+ */
+void PostOrder2(BinaryTreeNode *root) {
+    BinaryTreeNode *stack[100];
+    BinaryTreeNode *pre = NULL;
+    int top = 0;
+
+    while (top > 0 || root) {
+//        走到最左边
+        while (top < 100 && root) {
+            stack[top++] = root;
+            root = root->left;
+        }
+
+//        最左边节点
+        root = stack[top - 1];
+//        如果有右节点且未访问
+        if (root->right && root->right != pre) {
+            root = root->right;
+        } else {
+//            输出节点
+            top--;
+            printf("%d ", root->data);
+            pre = root;
+            root = null;
+        }
+    }
+}
+
+
+/**
+ * 创建n个节点的完全二叉树
+ * @param n 节点数目
+ * @return 根节点
+ */
+BinaryTreeNode *CreatBinaryTreeN(int n) {
+    srand(time(0));
+    int cnt = 1;
+//    用队列来保存已创建的二叉树
+    unsigned head = 0, rear = 0;
+    BinaryTreeNode *queue[100];
+    BinaryTreeNode *new = (BinaryTreeNode *) malloc(sizeof(BinaryTreeNode));
+    new->left = new->right = null;
+    new->data = cnt;
+    queue[head] = new;
+    rear++;
+
+    while (cnt < n) {
+        if (queue[head]->left == null) {
+            queue[rear] = (BinaryTreeNode *) malloc(sizeof(BinaryTreeNode));
+            queue[head]->left = queue[rear];
+            queue[rear]->left = queue[rear]->right = null;
+            queue[rear]->data = ++cnt;
+            rear++;
+        } else if (queue[head]->right == null) {
+            queue[rear] = (BinaryTreeNode *) malloc(sizeof(BinaryTreeNode));
+            queue[head]->right = queue[rear];
+            queue[rear]->left = queue[rear]->right = null;
+            queue[rear]->data = ++cnt;
+            rear++;
+        } else {
+            head++;
+        }
+    }
+
+    return queue[0];
+
+}
+
+
+/**
+ * 逆序层次遍历二叉树
+ * @param root 根节点
+ */
+void Inverse_LevelOrder(BinaryTreeNode *root) {
+    BinaryTreeNode *stack[100];
+    stack[0] = root;
+    int top = 0, bottom = 0;
+
+    while (bottom <= top) {
+        if (stack[bottom]->left)
+            stack[++top] = stack[bottom]->left;
+        if (stack[bottom]->right)
+            stack[++top] = stack[bottom]->right;
+        bottom++;
+    }
+
+    while (top >= 0) {
+        printf("%d ", stack[top--]->data);
+    }
+
+}
+
+/**
+ * 获取二叉树深度
+ * @param root 根节点
+ * @return 树深度
+ */
+int GetTreeHeight(BinaryTreeNode *root) {
+    BinaryTreeNode *stack[100];
+    unsigned top = 0;
+    stack[0] = root;
+    int height = 0;
+    do {
+        while (stack[top])
+            stack[++top] = stack[top]->left;
+
+        height = top > height ? top : height;
+        if (top > 0)
+            stack[top] = stack[--top]->right;
+
+    } while (top > 0 || stack[top]);
+
+    return height;
 }

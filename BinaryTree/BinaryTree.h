@@ -141,4 +141,34 @@ void ThreadedInTravel(ThreadedTree *root);
  */
 void InsertThreadedTree(ThreadedTree *p, ThreadedTree *insert);
 
+/**
+ * 后序遍历算法
+ * 使用一个前序指针指示是否访问了右节点, 从而判断是否输出根节点
+ * @param root 根节点
+ */
+void PostOrder2(BinaryTreeNode *root);
+
+
+/**
+ * 创建n个节点的完全二叉树
+ * @param n 节点数目
+ * @return 根节点
+ */
+BinaryTreeNode *CreatBinaryTreeN(int n);
+
+
+/**
+ * 逆序层次遍历二叉树
+ * @param root 根节点
+ */
+void Inverse_LevelOrder(BinaryTreeNode *root);
+
+
+/**
+ * 获取二叉树深度
+ * @param root 根节点
+ * @return 树深度
+ */
+int GetTreeHeight(BinaryTreeNode *root);
+
 #endif //DATA_STRUCTURE_BINARYTREE_H
