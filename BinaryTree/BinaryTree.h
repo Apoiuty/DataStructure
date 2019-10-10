@@ -171,4 +171,42 @@ void Inverse_LevelOrder(BinaryTreeNode *root);
  */
 int GetTreeHeight(BinaryTreeNode *root);
 
+/**
+ * 从前序和中序遍历生成二叉树
+ * @param A 前序
+ * @param B 中序
+ * @param l1 前序下标
+ * @param h1 前序上标
+ * @param l2 中序下标
+ * @param h2 中序下标
+ * @return 二叉树根节点
+ */
+BinaryTreeNode *GetTreeFromPreAndIn(int A[], int B[], int l1, int h1, int l2, int h2);
+
+/**
+ * 判断是否为完全二叉树
+ * @param root 根节点
+ * @return 逻辑值
+ */
+int IsCompleteBTree(BinaryTreeNode *root);
+
+/**
+ * 返回二叉树的双分支节点数
+ * @param root 根节点
+ * @return 双分支节点数
+ */
+int N_2Branch(BinaryTreeNode *root);
+
+/**
+ * 交换左右子树
+ * @param root 根节点
+ */
+void ExchangeLeftRight(BinaryTreeNode *root);
+
+/**
+ * 访问二叉树中序遍历第K个值
+ * @param root 根节点
+ */
+void InOrderK(BinaryTreeNode *root, int k);
+
 #endif //DATA_STRUCTURE_BINARYTREE_H

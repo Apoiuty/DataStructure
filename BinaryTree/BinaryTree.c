@@ -424,8 +424,152 @@ int GetTreeHeight(BinaryTreeNode *root) {
         height = top > height ? top : height;
         if (top > 0)
             stack[top] = stack[--top]->right;
-
     } while (top > 0 || stack[top]);
 
     return height;
+}
+
+
+/**
+ * 从前序和中序遍历生成二叉树
+ * @param A 前序
+ * @param B 中序
+ * @param l1 前序下标
+ * @param h1 前序上标
+ * @param l2 中序下标
+ * @param h2 中序下标
+ * @return 二叉树根节点
+ */
+BinaryTreeNode *GetTreeFromPreAndIn(int A[], int B[], int l1, int h1, int l2, int h2) {
+    BinaryTreeNode *root = (BinaryTreeNode *) malloc(sizeof(BinaryTreeNode));
+    root->data = A[l1];
+
+//    查询根节点, 用根节点将二叉树分为左子树和右子树
+    int i = 0;
+    for (; B[i] != root->data; i++);
+
+    int left_len = i - l2, right_len = h2 - i;
+//    左子树递归
+    if (left_len) {
+        root->left = GetTreeFromPreAndIn(A, B, l1 + 1, l1 + left_len, l2, l2 + left_len - 1);
+    } else {
+        root->left = null;
+    }
+
+//    右子树递归
+    if (right_len) {
+        root->right = GetTreeFromPreAndIn(A, B, h1 - right_len + 1, h1, h2 - right_len + 1, h2);
+    } else
+        root->right = null;
+
+    return root;
+
+}
+
+/**
+ * 判断是否为完全二叉树
+ * @param root 根节点
+ * @return 逻辑值
+ */
+int IsCompleteBTree(BinaryTreeNode *root) {
+//    是完全二叉树
+    int Bool;
+    Bool = 1;
+    if (root) {
+        //    叶节点是完全二叉树
+        if (!root->left && !root->right)
+            return 1;
+        //    没有左节点但有右节点不是完全二叉树
+        if (root->right && !root->left)
+            return 0;
+        else {
+            //        前序遍历
+            Bool = IsCompleteBTree(root->left);
+            if (Bool == 0)
+                return Bool;
+            Bool = IsCompleteBTree(root->right);
+            if (Bool == 0)
+                return Bool;
+        }
+    }
+
+    return Bool;
+}
+
+/**
+ * 返回二叉树的双分支节点数
+ * @param root 根节点
+ * @return 双分支节点数
+ */
+int N_2Branch(BinaryTreeNode *root) {
+//    int cnt = 0;
+//    BinaryTreeNode *stack[100];
+//    int top = 0;
+//    stack[top] = root;
+//    while (top >= 0 && stack[0]) {
+////        先序遍历
+//        while (stack[top])
+//            stack[++top] = stack[top]->left;
+//
+//        top--;
+//        if (stack[top]->right && stack[top]->left) {
+//            cnt++;
+//        }
+//        stack[top] = stack[top]->right;
+//    }
+//
+//    return cnt;
+
+//    递归算法
+    if (root == null)
+        return 0;
+    else if (root->left && root->right) {
+//        左右和自己
+        return N_2Branch(root->right) + N_2Branch(root->left) + 1;
+    } else
+        return N_2Branch(root->right) + N_2Branch(root->left);
+
+}
+
+/**
+ * 交换左右子树
+ * @param root 根节点
+ */
+void ExchangeLeftRight(BinaryTreeNode *root) {
+    if (root) {
+        BinaryTreeNode *temp;
+        temp = root->left;
+        root->left = root->right;
+        root->right = temp;
+        ExchangeLeftRight(root->left);
+        ExchangeLeftRight(root->right);
+    }
+}
+
+/**
+ * 访问二叉树中序遍历第K个值
+ * @param root 根节点
+ */
+void InOrderK(BinaryTreeNode *root, int k) {
+    BinaryTreeNode *stack[100];
+    int top = 0;
+    stack[top] = root;
+
+    while (stack[0]) {
+        while (stack[top])
+            stack[++top] = stack[top]->left;
+
+        top--;
+        if (stack[top]) {
+            k--;
+        }
+
+        if (k == 0) {
+            printf("%d", stack[top]->data);
+            break;
+        }
+
+        stack[top] = stack[top]->right;
+
+    }
 }
