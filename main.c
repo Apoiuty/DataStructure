@@ -2,9 +2,8 @@
 #include "BinaryTree/BinaryTree.h"
 
 int main() {
-    BinaryTreeNode *root = CreatBinaryTreeN(7);
-    InOrderK(root, 5);
-
+    BinaryTreeNode *root1 = CreatBinaryTreeN(7), *root2 = CreatBinaryTreeN(7);
+    printf("%d", IsSimilar(root1, root2));
     return 0;
 }
 

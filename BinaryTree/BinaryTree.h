@@ -5,7 +5,9 @@
 #ifndef DATA_STRUCTURE_BINARYTREE_H
 #define DATA_STRUCTURE_BINARYTREE_H
 
+
 #include <stdlib.h>
+#include <string.h>
 #include <stdio.h>
 
 //二叉树的左右节点链式存储结构
@@ -29,6 +31,12 @@ typedef struct threaded_tree {
     int data;
     struct threaded_tree *left, *right;
 } ThreadedTree;
+
+//表达式二叉树结构
+typedef struct expr {
+    char expr;
+    struct expr *left, *right;
+} Expr;
 
 /**
  * 二叉树节点初始化函数
@@ -208,5 +216,76 @@ void ExchangeLeftRight(BinaryTreeNode *root);
  * @param root 根节点
  */
 void InOrderK(BinaryTreeNode *root, int k);
+
+/**
+ * 删除值为x的根子树
+ * @param root 根节点
+ * @param x 要删除的值
+ */
+void Delete_x(BinaryTreeNode *root, int x);
+
+/**
+ * 打印值为x节点的父节点
+ * @param root 根节点
+ * @param x 值x
+ */
+int Print_x(BinaryTreeNode *root, int x);
+
+
+/**
+ * 查找p,q节点的最近公共父节点
+ * @param root 二叉树根节点
+ * @param p
+ * @param q
+ */
+void Ancestor(BinaryTreeNode *root, BinaryTreeNode *p, BinaryTreeNode *q);
+
+/**
+ * 求取二叉树的宽度
+ * @param root 根节点
+ * @return 宽度
+ */
+int Get_TreeWidth(BinaryTreeNode *root);
+
+/**
+ * 前序满二叉树树转化为后序树
+ * @param A 前序树
+ * @param l1
+ * @param h1
+ * @param B 后续树
+ * @param l2
+ * @param h2
+ */
+void Pre2Post(int A[], int l1, int h1, int B[], int l2, int h2);
+
+/**
+ * 二叉树的叶节点从左到到右连接为链表
+ * @param root 根节点
+ */
+void Left2Right(BinaryTreeNode *root);
+
+/**
+ * 判断两棵二叉树是否形状相似
+ * @param root1 根节点1
+ * @param root2 根节点2
+ * @return 逻辑值
+ */
+int IsSimilar(BinaryTreeNode *root1, BinaryTreeNode *root2);
+
+
+/**
+ * 在中序线索树种查找p的后序前驱节点
+ * @param root 根节点
+ * @param p 要查找的节点
+ * @return 查找到的节点
+ */
+ThreadedTree InPostPre(ThreadedTree *root, ThreadedTree *p);
+
+
+/**
+ * 表达式二叉树转化为表达式
+ * @param root 根节点
+ */
+void Btree2Expr(Expr *root, int deep);
 
 #endif //DATA_STRUCTURE_BINARYTREE_H

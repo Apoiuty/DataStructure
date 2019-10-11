@@ -573,3 +573,300 @@ void InOrderK(BinaryTreeNode *root, int k) {
 
     }
 }
+
+/**
+ * 删除值为x的根子树
+ * @param root 根节点
+ * @param x 要删除的值
+ */
+void Delete_x(BinaryTreeNode *root, int x) {
+    BinaryTreeNode *temp;
+    BinaryTreeNode *stack[100];
+    BinaryTreeNode *delete_tree[100];
+    int d_top = 0;
+    int top = 0;
+    stack[top] = root;
+    while (stack[0]) {
+//        前序遍历
+        while (stack[top]) {
+            stack[++top] = stack[top]->left;
+        }
+
+        top--;
+//        找到x删除子树
+        if (stack[top]->data == x) {
+            temp = stack[top];
+
+            if (stack[top] == stack[top - 1]->left) {
+                stack[top - 1]->left = NULL;
+            } else {
+                stack[top - 1]->right = null;
+            }
+
+            delete_tree[0] = temp;
+            d_top = 0;
+            while (delete_tree[0]) {
+                while (delete_tree[d_top]) {
+                    delete_tree[++d_top] = delete_tree[d_top]->left;
+                }
+
+                d_top--;
+                if (delete_tree[d_top]) {
+                    temp = delete_tree[d_top]->right;
+                    free(delete_tree[d_top]);
+                    delete_tree[d_top] = temp;
+                }
+            }
+//            回退一个栈
+            top--;
+        }
+
+//        访问右子节点
+        stack[top] = stack[top]->right;
+
+    }
+
+}
+
+/**
+ * 打印值为x节点的父节点
+ * @param root 根节点
+ * @param x 值x
+ */
+int Print_x(BinaryTreeNode *root, int x) {
+    if (root) {
+        int f1, f2;
+        f1 = Print_x(root->left, x);
+        f2 = Print_x(root->right, x);
+
+        if (f1 || f2) {
+            printf("%d ", root->data);
+            return 1;
+        }
+
+        if (root->data == x)
+            return 1;
+    }
+    return 0;
+}
+
+
+/**
+ * 查找p,q节点的最近公共父节点
+ * @param root 二叉树根节点
+ * @param p
+ * @param q
+ */
+void Ancestor(BinaryTreeNode *root, BinaryTreeNode *p, BinaryTreeNode *q) {
+    BinaryTreeNode *stackp[100];
+    BinaryTreeNode *stackq[100];
+    int tagp[100], tagq[100];
+    stackq[0] = stackp[0] = root;
+    tagp[0] = tagq[0] = 0;
+
+    int top = 0;
+    while (stackp[0]) {
+        while (stackp[top] && stackp[top] != q) {
+            stackp[++top] = stackp[top]->left;
+            tagp[top] = 0;
+        }
+
+        if (stackp[top] == q) {
+            stackp[top] = null;
+            break;
+        }
+
+        top--;
+        while (top && tagp[top] == 1)
+            top--;
+
+        if (top) {
+            tagp[top] = 1;
+            stackp[++top] = stackp[top]->right;
+            tagp[top] = 0;
+        }
+
+    }
+
+    top = 0;
+    while (stackq[0]) {
+        while (stackq[top] && stackq[top] != p) {
+            stackq[++top] = stackq[top]->left;
+            tagq[top] = 0;
+        }
+
+        if (stackq[top] == p) {
+            stackq[top] = null;
+            break;
+        }
+
+        top--;
+        while (top && tagq[top] == 1)
+            top--;
+
+        if (top) {
+            tagq[top] = 1;
+            stackq[++top] = stackq[top]->right;
+            tagq[top] = 0;
+        }
+
+    }
+
+    int i;
+    for (i = 0; stackp[i] == stackq[i] && stackp[i] && stackq[i]; ++i);
+    printf("%d ", stackp[--i]->data);
+}
+
+/**
+ * 求取二叉树的宽度
+ * @param root 根节点
+ * @return 宽度
+ */
+int Get_TreeWidth(BinaryTreeNode *root) {
+//    队列来保存每层节点
+    BinaryTreeNode *queue[100];
+    int left, right;
+    left = 0;
+    right = 1;
+    int width = 1;
+    int i, j;
+
+    queue[left] = root;
+    while (left < right) {
+//        遍历下一层
+        for (i = left, j = 0; i < right; i++) {
+            if (queue[i]->left) {
+                queue[right + j] = queue[i]->left;
+                j++;
+            }
+            if (queue[i]->right) {
+                queue[right + j] = queue[i]->right;
+                j++;
+            }
+        }
+
+        if (j > width)
+            width = j;
+
+//        迭代下一层
+        left = right;
+        right += j;
+    }
+
+    return width;
+}
+
+/**
+ * 前序满二叉树树转化为后序树
+ * @param A 前序树
+ * @param l1
+ * @param h1
+ * @param B 后续树
+ * @param l2
+ * @param h2
+ */
+void Pre2Post(int A[], int l1, int h1, int B[], int l2, int h2) {
+    int half;
+    if (h1 >= l1) {
+        B[h2] = A[l1];
+        half = (h1 - l1) / 2;
+        Pre2Post(A, l1 + 1, l1 + half, B, l2, l2 + half - 1);
+        Pre2Post(A, l1 + half + 1, h1, B, l2 + half, h2 - 1);
+    }
+}
+
+/**
+ * 二叉树的叶节点从左到到右连接为链表
+ * @param root 根节点
+ */
+void Left2Right(BinaryTreeNode *root) {
+    BinaryTreeNode *stack[100];
+    BinaryTreeNode *pre = null;
+    int top = 0;
+    stack[top] = root;
+    while (stack[0]) {
+//        前序遍历
+        while (stack[top]) {
+            stack[++top] = stack[top]->left;
+        }
+
+        top--;
+
+//        找到页节点
+        if (stack[top]->left == NULL && stack[top]->right == NULL) {
+            if (pre)
+                pre->right = stack[top];
+            pre = stack[top];
+        }
+
+//        迭代
+        stack[top] = stack[top]->right;
+    }
+}
+
+/**
+ * 判断两棵二叉树是否形状相似
+ * @param root1 根节点1
+ * @param root2 根节点2
+ * @return 逻辑值
+ */
+int IsSimilar(BinaryTreeNode *root1, BinaryTreeNode *root2) {
+    if (root1) {
+        if ((root1->left && !root2->left) || (!root1->left && root2->left))
+            return 0;
+        else if ((root1->right && !root2->right) || (root2->right && !root1->right))
+            return 0;
+        else {
+            return IsSimilar(root1->left, root2->left) && IsSimilar(root1->right, root2->right);
+        }
+    } else {
+        return 1;
+    }
+}
+
+/**
+ * 在中序线索树种查找p的后序前驱节点
+ * @param root 根节点
+ * @param p 要查找的节点
+ * @return 查找到的节点
+ */
+ThreadedTree InPostPre(ThreadedTree *root, ThreadedTree *p) {
+    ThreadedTree *tar;
+//    p有右子女
+    if (p->rtag == 0)
+        tar = p->right;
+//    p有左子女
+    else if (p->ltag == 0)
+        tar = p->left;
+//    p为中序第一个
+    else if (p->left == NULL)
+        tar = null;
+    else {
+//        顺序查找p祖先的左节点
+        while (p->ltag == 1 && p->left != NULL)
+            p = p->left;
+
+        tar = p->ltag == 0 ? p->left : null;
+    }
+
+}
+
+/**
+ * 表达式二叉树转化为表达式
+ * @param root 根节点
+ */
+void Btree2Expr(Expr *root, int deep) {
+    if (root) {
+        if (strchr("+-*/", root->expr)) {
+            if (deep > 1)
+                printf("(");
+            Btree2Expr(root->left, deep + 1);
+            printf("%c", root->expr);
+            Btree2Expr(root->right, deep + 1);
+            if (deep > 1)
+                printf(")");
+        } else if (root->expr >= 'a' && root->expr <= 'z') {
+            printf("%c", root->expr);
+        }
+    }
+}
