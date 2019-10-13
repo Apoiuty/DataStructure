@@ -870,3 +870,41 @@ void Btree2Expr(Expr *root, int deep) {
         }
     }
 }
+
+/**
+ * 二叉树对称序线索化
+ * @param root 根节点
+ */
+void InorderTheadedTree(ThreadedTree *root) {
+    ThreadedTree *stack[100];
+    int top = 0;
+    stack[top] = root;
+    ThreadedTree *pre = NULL;
+    while (stack[0]) {
+        while (stack[top]) {
+            stack[++top] = stack[top]->right;
+        }
+        top--;
+
+        if (stack[top]->left == null) {
+            if (pre) {
+                if (pre->right == null) {
+                    pre->right = stack[top];
+                    pre->rtag = 1;
+                }
+                stack[top]->ltag = 1;
+                stack[top]->left = pre;
+                pre = stack[top];
+            } else {
+//                第一个遍历元素
+                stack[top]->ltag = 1;
+                pre = stack[top];
+            }
+//      入栈右子树
+            stack[top] = stack[top]->right;
+        }
+
+    }
+}
+
+

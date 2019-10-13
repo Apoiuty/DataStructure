@@ -7,8 +7,8 @@
 
 
 #include <stdlib.h>
-#include <string.h>
 #include <stdio.h>
+#include <string.h>
 
 //二叉树的左右节点链式存储结构
 struct binarytreenode {
@@ -287,5 +287,13 @@ ThreadedTree InPostPre(ThreadedTree *root, ThreadedTree *p);
  * @param root 根节点
  */
 void Btree2Expr(Expr *root, int deep);
+
+/**
+ * 二叉树对称序线索化
+ * @param root 根节点
+ */
+void InorderTheadedtree(BinaryTreeNode *root);
+
+
 
 #endif //DATA_STRUCTURE_BINARYTREE_H
