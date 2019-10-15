@@ -908,3 +908,16 @@ void InorderTheadedTree(ThreadedTree *root) {
 }
 
 
+/**
+ * 在中序二叉穿线树中寻找p的前驱节点
+ * @param root 根节点
+ * @param p 要查找的节点
+ */
+ThreadedTree *InorderPre(ThreadedTree *root, ThreadedTree *p) {
+//    如果p有前驱节点, 那么直接返回
+    if (p->ltag)
+        return p->left;
+//    p is not leaf node, if it has left son
+    if (p->left)
+        return p->left;
+}

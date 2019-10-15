@@ -122,6 +122,33 @@ Data_Struture/fast:
 	$(MAKE) -f CMakeFiles\Data_Struture.dir\build.make CMakeFiles/Data_Struture.dir/build
 .PHONY : Data_Struture/fast
 
+BinaryTree/BinarySTree.obj: BinaryTree/BinarySTree.c.obj
+
+.PHONY : BinaryTree/BinarySTree.obj
+
+# target to build an object file
+BinaryTree/BinarySTree.c.obj:
+	$(MAKE) -f CMakeFiles\Data_Struture.dir\build.make CMakeFiles/Data_Struture.dir/BinaryTree/BinarySTree.c.obj
+.PHONY : BinaryTree/BinarySTree.c.obj
+
+BinaryTree/BinarySTree.i: BinaryTree/BinarySTree.c.i
+
+.PHONY : BinaryTree/BinarySTree.i
+
+# target to preprocess a source file
+BinaryTree/BinarySTree.c.i:
+	$(MAKE) -f CMakeFiles\Data_Struture.dir\build.make CMakeFiles/Data_Struture.dir/BinaryTree/BinarySTree.c.i
+.PHONY : BinaryTree/BinarySTree.c.i
+
+BinaryTree/BinarySTree.s: BinaryTree/BinarySTree.c.s
+
+.PHONY : BinaryTree/BinarySTree.s
+
+# target to generate assembly for a file
+BinaryTree/BinarySTree.c.s:
+	$(MAKE) -f CMakeFiles\Data_Struture.dir\build.make CMakeFiles/Data_Struture.dir/BinaryTree/BinarySTree.c.s
+.PHONY : BinaryTree/BinarySTree.c.s
+
 BinaryTree/BinaryTree.obj: BinaryTree/BinaryTree.c.obj
 
 .PHONY : BinaryTree/BinaryTree.obj
@@ -698,6 +725,9 @@ help:
 	@echo ... Data_Struture
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... BinaryTree/BinarySTree.obj
+	@echo ... BinaryTree/BinarySTree.i
+	@echo ... BinaryTree/BinarySTree.s
 	@echo ... BinaryTree/BinaryTree.obj
 	@echo ... BinaryTree/BinaryTree.i
 	@echo ... BinaryTree/BinaryTree.s

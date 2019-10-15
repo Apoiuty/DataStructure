@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Data_Struture.dir/BinaryTree/BinarySTree.c.obj"
   "CMakeFiles/Data_Struture.dir/BinaryTree/BinaryTree.c.obj"
   "CMakeFiles/Data_Struture.dir/Linear_List/list.c.obj"
   "CMakeFiles/Data_Struture.dir/Linear_List/pqueue.c.obj"

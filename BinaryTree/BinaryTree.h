@@ -295,5 +295,10 @@ void Btree2Expr(Expr *root, int deep);
 void InorderTheadedtree(BinaryTreeNode *root);
 
 
+/**
+ * 在中序二叉穿线树中寻找前驱节点
+ * @param root 根节点
+ */
+ThreadedTree *InorderPre(ThreadedTree *root, ThreadedTree *p);
 
 #endif //DATA_STRUCTURE_BINARYTREE_H
