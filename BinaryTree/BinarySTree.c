@@ -122,10 +122,8 @@ void Insert_AVL(AVL **ROOT, AVL *p) {
 //        插入节点
         pre = cur;
         if (cur->data < p->data) {
-            cur->balence--;
             cur = cur->right;
         } else {
-            cur->balence++;
             cur = cur->left;
         }
     }
@@ -137,17 +135,33 @@ void Insert_AVL(AVL **ROOT, AVL *p) {
         pre->left = p;
     }
 
-//    查看二叉树是否失衡
+//        修改平衡因子并寻找失衡节点
+//          修改父节点平衡因子
+    if (pre->left == p) {
+        pre->balence++;
+    } else
+        pre->balence--;
+
+
     cur = pre;
-    while (cur) {
-        if (cur->balence > -2 && cur->balence < 2) {
+    if (pre->left == NULL || pre->right == NULL) {
+        while (cur && cur->parent) {
+            if (cur->parent->left == cur) {
+                cur->parent->balence++;
+            } else {
+                cur->parent->balence--;
+            }
+            if (cur->parent->balence < -1 || cur->parent->balence > 1) {
+                cur = cur->parent;
+                break;
+            }
             cur = cur->parent;
-        } else {
-            break;
         }
     }
 
-    if (cur == NULL)
+
+//    是否是失衡节点
+    if (cur->balence >= -1 && cur->balence <= 1)
         return;
 
 
@@ -156,6 +170,15 @@ void Insert_AVL(AVL **ROOT, AVL *p) {
     if (cur->balence == 2) {
         son = cur->left;
         if (cur->left->balence == 1) {
+            if (cur->parent) {
+                if (cur->parent->left == cur) {
+                    cur->parent->left = son;
+                } else {
+                    cur->parent->right = son;
+                }
+            }
+
+
             cur->balence = cur->left->balence = 0;
             cur->left = cur->left->right;
             son->right = cur;
@@ -166,8 +189,17 @@ void Insert_AVL(AVL **ROOT, AVL *p) {
                 *ROOT = son;
             }
 //            LR翻转
-        } else if (cur->left->data == -1) {
+        } else if (cur->left->balence == -1) {
             grandson = son->right;
+
+            if (cur->parent) {
+                if (cur->parent->left == cur) {
+                    cur->parent->left = grandson;
+                } else {
+                    cur->parent->right = grandson;
+                }
+            }
+
 
             son->parent = grandson;
             son->right = grandson->left;
@@ -179,8 +211,15 @@ void Insert_AVL(AVL **ROOT, AVL *p) {
             grandson->left = son;
             grandson->right = cur;
 
-            son->balence = grandson->balence = 0;
-            cur->balence = -1;
+            if (grandson->balence == 1) {
+                son->balence = grandson->balence = 0;
+                cur->balence = -1;
+            } else if (grandson->balence == 0) {
+                grandson->balence = son->balence = cur->balence = 0;
+            } else if (grandson->balence == -1) {
+                grandson->balence = cur->balence = 0;
+                son->balence = 1;
+            }
 
             if (grandson->parent == NULL) {
                 *ROOT = grandson;
@@ -191,6 +230,14 @@ void Insert_AVL(AVL **ROOT, AVL *p) {
 //        RR翻转
         son = cur->right;
         if (son->balence == -1) {
+            if (cur->parent) {
+                if (cur->parent->left == cur) {
+                    cur->parent->left = son;
+                } else {
+                    cur->parent->right = son;
+                }
+            }
+
             son->parent = cur->parent;
             cur->parent = son;
 
@@ -204,7 +251,15 @@ void Insert_AVL(AVL **ROOT, AVL *p) {
             }
         } else {
 //            RL翻转
+
             grandson = son->left;
+            if (cur->parent) {
+                if (cur->parent->left == cur) {
+                    cur->parent->left = grandson;
+                } else {
+                    cur->parent->right = grandson;
+                }
+            }
 
             grandson->parent = cur->parent;
             cur->right = grandson->left;
@@ -215,9 +270,16 @@ void Insert_AVL(AVL **ROOT, AVL *p) {
             grandson->left = cur;
             grandson->right = son;
 
-            cur->balence = grandson->balence = 0;
-            son->balence = -1;
 
+            if (grandson->balence == -1) {
+                son->balence = grandson->balence = 0;
+                cur->balence = +1;
+            } else if (grandson->balence == 0) {
+                grandson->balence = son->balence = cur->balence = 0;
+            } else if (grandson->balence == +1) {
+                grandson->balence = cur->balence = 0;
+                son->balence = -1;
+            }
             if (grandson->parent == NULL) {
                 *ROOT = son;
             }
@@ -234,11 +296,27 @@ void Insert_AVL(AVL **ROOT, AVL *p) {
  */
 void Printout_AVL(AVL *root) {
     if (root) {
-        printf("%d ", root->data);
+        printf("(%d,%d) ", root->data, root->balence);
         Printout_AVL(root->left);
         Printout_AVL(root->right);
         if (root->parent == NULL) {
             printf("\n");
         }
+    }
+}
+
+
+/**
+ * 获取平衡二叉树的高度
+ * @param root 根节点
+ * @return 高度值
+ */
+int Get_AVLHeight(AVL *root) {
+    if (root) {
+        int h1 = Get_AVLHeight(root->left);
+        int h2 = Get_AVLHeight(root->right);
+        return h1 > h2 ? h1 + 1 : h2 + 1;
+    } else {
+        return 0;
     }
 }

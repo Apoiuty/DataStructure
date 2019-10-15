@@ -54,5 +54,13 @@ void Delete_bst(BinaryTreeNode *root, BinaryTreeNode *tar, BinaryTreeNode *par);
  */
 void Printout_AVL(AVL *root);
 
+
+/**
+ * 获取平衡二叉树的高度
+ * @param root 根节点
+ * @return 高度值
+ */
+int Get_AVLHeight(AVL *root);
+
 #endif //DATA_STRUCTURE_BINARYSTREE_H
 

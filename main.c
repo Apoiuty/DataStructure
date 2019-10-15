@@ -4,13 +4,13 @@
 
 int main() {
     AVL *root = (AVL *) malloc(sizeof(AVL));
-    root->data = 12;
+    root->data = 10;
     root->left = root->right = root->parent = NULL;
     root->balence = 0;
 
     AVL *new;
-    int A[] = {22, 31, 56, 50};
-    for (int i = 0; i < 4; ++i) {
+    int A[] = {5, 11, 4, 6, 7};
+    for (int i = 0; i < sizeof(A) / sizeof(int); ++i) {
         new = (AVL *) malloc(sizeof(AVL));
         new->balence = 0;
         new->parent = new->left = new->right = NULL;

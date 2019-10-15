@@ -6,15 +6,27 @@
 
 #IncludeRegexTransform: 
 
+E:/OneDrive/OneDrive - mail.nwpu.edu.cn/Project/Data_Structure/BinaryTree/BinarySTree.c
+time.h
+-
+BinarySTree.h
+E:/OneDrive/OneDrive - mail.nwpu.edu.cn/Project/Data_Structure/BinaryTree/BinarySTree.h
+
+E:/OneDrive/OneDrive - mail.nwpu.edu.cn/Project/Data_Structure/BinaryTree/BinarySTree.h
+stdlib.h
+-
+stdio.h
+-
+string.h
+-
+BinaryTree.h
+E:/OneDrive/OneDrive - mail.nwpu.edu.cn/Project/Data_Structure/BinaryTree/BinaryTree.h
+
 E:/OneDrive/OneDrive - mail.nwpu.edu.cn/Project/Data_Structure/BinaryTree/BinaryTree.h
 stdlib.h
 -
 stdio.h
 -
-
-E:/OneDrive/OneDrive - mail.nwpu.edu.cn/Project/Data_Structure/main.c
-stdio.h
+string.h
 -
-BinaryTree/BinaryTree.h
-E:/OneDrive/OneDrive - mail.nwpu.edu.cn/Project/Data_Structure/BinaryTree/BinaryTree.h
 
