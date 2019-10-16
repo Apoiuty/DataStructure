@@ -6,6 +6,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_C
   "E:/OneDrive/OneDrive - mail.nwpu.edu.cn/Project/Data_Structure/BinaryTree/BinarySTree.c" "E:/OneDrive/OneDrive - mail.nwpu.edu.cn/Project/Data_Structure/cmake-build-debug/CMakeFiles/Data_Struture.dir/BinaryTree/BinarySTree.c.obj"
   "E:/OneDrive/OneDrive - mail.nwpu.edu.cn/Project/Data_Structure/BinaryTree/BinaryTree.c" "E:/OneDrive/OneDrive - mail.nwpu.edu.cn/Project/Data_Structure/cmake-build-debug/CMakeFiles/Data_Struture.dir/BinaryTree/BinaryTree.c.obj"
+  "E:/OneDrive/OneDrive - mail.nwpu.edu.cn/Project/Data_Structure/BinaryTree/huffermanTree.c" "E:/OneDrive/OneDrive - mail.nwpu.edu.cn/Project/Data_Structure/cmake-build-debug/CMakeFiles/Data_Struture.dir/BinaryTree/huffermanTree.c.obj"
+  "E:/OneDrive/OneDrive - mail.nwpu.edu.cn/Project/Data_Structure/BinaryTree/maxHeap.c" "E:/OneDrive/OneDrive - mail.nwpu.edu.cn/Project/Data_Structure/cmake-build-debug/CMakeFiles/Data_Struture.dir/BinaryTree/maxHeap.c.obj"
   "E:/OneDrive/OneDrive - mail.nwpu.edu.cn/Project/Data_Structure/Linear_List/list.c" "E:/OneDrive/OneDrive - mail.nwpu.edu.cn/Project/Data_Structure/cmake-build-debug/CMakeFiles/Data_Struture.dir/Linear_List/list.c.obj"
   "E:/OneDrive/OneDrive - mail.nwpu.edu.cn/Project/Data_Structure/Linear_List/pqueue.c" "E:/OneDrive/OneDrive - mail.nwpu.edu.cn/Project/Data_Structure/cmake-build-debug/CMakeFiles/Data_Struture.dir/Linear_List/pqueue.c.obj"
   "E:/OneDrive/OneDrive - mail.nwpu.edu.cn/Project/Data_Structure/Linear_List/queue.c" "E:/OneDrive/OneDrive - mail.nwpu.edu.cn/Project/Data_Structure/cmake-build-debug/CMakeFiles/Data_Struture.dir/Linear_List/queue.c.obj"

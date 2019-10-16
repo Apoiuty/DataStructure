@@ -176,6 +176,60 @@ BinaryTree/BinaryTree.c.s:
 	$(MAKE) -f CMakeFiles\Data_Struture.dir\build.make CMakeFiles/Data_Struture.dir/BinaryTree/BinaryTree.c.s
 .PHONY : BinaryTree/BinaryTree.c.s
 
+BinaryTree/huffermanTree.obj: BinaryTree/huffermanTree.c.obj
+
+.PHONY : BinaryTree/huffermanTree.obj
+
+# target to build an object file
+BinaryTree/huffermanTree.c.obj:
+	$(MAKE) -f CMakeFiles\Data_Struture.dir\build.make CMakeFiles/Data_Struture.dir/BinaryTree/huffermanTree.c.obj
+.PHONY : BinaryTree/huffermanTree.c.obj
+
+BinaryTree/huffermanTree.i: BinaryTree/huffermanTree.c.i
+
+.PHONY : BinaryTree/huffermanTree.i
+
+# target to preprocess a source file
+BinaryTree/huffermanTree.c.i:
+	$(MAKE) -f CMakeFiles\Data_Struture.dir\build.make CMakeFiles/Data_Struture.dir/BinaryTree/huffermanTree.c.i
+.PHONY : BinaryTree/huffermanTree.c.i
+
+BinaryTree/huffermanTree.s: BinaryTree/huffermanTree.c.s
+
+.PHONY : BinaryTree/huffermanTree.s
+
+# target to generate assembly for a file
+BinaryTree/huffermanTree.c.s:
+	$(MAKE) -f CMakeFiles\Data_Struture.dir\build.make CMakeFiles/Data_Struture.dir/BinaryTree/huffermanTree.c.s
+.PHONY : BinaryTree/huffermanTree.c.s
+
+BinaryTree/maxHeap.obj: BinaryTree/maxHeap.c.obj
+
+.PHONY : BinaryTree/maxHeap.obj
+
+# target to build an object file
+BinaryTree/maxHeap.c.obj:
+	$(MAKE) -f CMakeFiles\Data_Struture.dir\build.make CMakeFiles/Data_Struture.dir/BinaryTree/maxHeap.c.obj
+.PHONY : BinaryTree/maxHeap.c.obj
+
+BinaryTree/maxHeap.i: BinaryTree/maxHeap.c.i
+
+.PHONY : BinaryTree/maxHeap.i
+
+# target to preprocess a source file
+BinaryTree/maxHeap.c.i:
+	$(MAKE) -f CMakeFiles\Data_Struture.dir\build.make CMakeFiles/Data_Struture.dir/BinaryTree/maxHeap.c.i
+.PHONY : BinaryTree/maxHeap.c.i
+
+BinaryTree/maxHeap.s: BinaryTree/maxHeap.c.s
+
+.PHONY : BinaryTree/maxHeap.s
+
+# target to generate assembly for a file
+BinaryTree/maxHeap.c.s:
+	$(MAKE) -f CMakeFiles\Data_Struture.dir\build.make CMakeFiles/Data_Struture.dir/BinaryTree/maxHeap.c.s
+.PHONY : BinaryTree/maxHeap.c.s
+
 Linear_List/list.obj: Linear_List/list.c.obj
 
 .PHONY : Linear_List/list.obj
@@ -731,6 +785,12 @@ help:
 	@echo ... BinaryTree/BinaryTree.obj
 	@echo ... BinaryTree/BinaryTree.i
 	@echo ... BinaryTree/BinaryTree.s
+	@echo ... BinaryTree/huffermanTree.obj
+	@echo ... BinaryTree/huffermanTree.i
+	@echo ... BinaryTree/huffermanTree.s
+	@echo ... BinaryTree/maxHeap.obj
+	@echo ... BinaryTree/maxHeap.i
+	@echo ... BinaryTree/maxHeap.s
 	@echo ... Linear_List/list.obj
 	@echo ... Linear_List/list.i
 	@echo ... Linear_List/list.s

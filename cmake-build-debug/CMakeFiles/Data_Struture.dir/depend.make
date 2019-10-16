@@ -8,6 +8,12 @@ CMakeFiles/Data_Struture.dir/BinaryTree/BinarySTree.c.obj: ../BinaryTree/BinaryT
 CMakeFiles/Data_Struture.dir/BinaryTree/BinaryTree.c.obj: ../BinaryTree/BinaryTree.c
 CMakeFiles/Data_Struture.dir/BinaryTree/BinaryTree.c.obj: ../BinaryTree/BinaryTree.h
 
+CMakeFiles/Data_Struture.dir/BinaryTree/huffermanTree.c.obj: ../BinaryTree/huffermanTree.c
+CMakeFiles/Data_Struture.dir/BinaryTree/huffermanTree.c.obj: ../BinaryTree/huffermanTree.h
+
+CMakeFiles/Data_Struture.dir/BinaryTree/maxHeap.c.obj: ../BinaryTree/maxHeap.c
+CMakeFiles/Data_Struture.dir/BinaryTree/maxHeap.c.obj: ../BinaryTree/maxHeap.h
+
 CMakeFiles/Data_Struture.dir/Linear_List/list.c.obj: ../Linear_List/list.c
 CMakeFiles/Data_Struture.dir/Linear_List/list.c.obj: ../Linear_List/list.h
 
@@ -84,5 +90,6 @@ CMakeFiles/Data_Struture.dir/String/String.c.obj: ../String/String.h
 
 CMakeFiles/Data_Struture.dir/main.c.obj: ../BinaryTree/BinarySTree.h
 CMakeFiles/Data_Struture.dir/main.c.obj: ../BinaryTree/BinaryTree.h
+CMakeFiles/Data_Struture.dir/main.c.obj: ../BinaryTree/maxHeap.h
 CMakeFiles/Data_Struture.dir/main.c.obj: ../main.c
 

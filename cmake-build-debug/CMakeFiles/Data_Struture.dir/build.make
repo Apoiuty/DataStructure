@@ -342,6 +342,32 @@ CMakeFiles/Data_Struture.dir/BinaryTree/BinarySTree.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Data_Struture.dir/BinaryTree/BinarySTree.c.s"
 	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "E:\OneDrive\OneDrive - mail.nwpu.edu.cn\Project\Data_Structure\BinaryTree\BinarySTree.c" -o CMakeFiles\Data_Struture.dir\BinaryTree\BinarySTree.c.s
 
+CMakeFiles/Data_Struture.dir/BinaryTree/huffermanTree.c.obj: CMakeFiles/Data_Struture.dir/flags.make
+CMakeFiles/Data_Struture.dir/BinaryTree/huffermanTree.c.obj: ../BinaryTree/huffermanTree.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\OneDrive\OneDrive - mail.nwpu.edu.cn\Project\Data_Structure\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/Data_Struture.dir/BinaryTree/huffermanTree.c.obj"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Data_Struture.dir\BinaryTree\huffermanTree.c.obj   -c "E:\OneDrive\OneDrive - mail.nwpu.edu.cn\Project\Data_Structure\BinaryTree\huffermanTree.c"
+
+CMakeFiles/Data_Struture.dir/BinaryTree/huffermanTree.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Data_Struture.dir/BinaryTree/huffermanTree.c.i"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "E:\OneDrive\OneDrive - mail.nwpu.edu.cn\Project\Data_Structure\BinaryTree\huffermanTree.c" > CMakeFiles\Data_Struture.dir\BinaryTree\huffermanTree.c.i
+
+CMakeFiles/Data_Struture.dir/BinaryTree/huffermanTree.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Data_Struture.dir/BinaryTree/huffermanTree.c.s"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "E:\OneDrive\OneDrive - mail.nwpu.edu.cn\Project\Data_Structure\BinaryTree\huffermanTree.c" -o CMakeFiles\Data_Struture.dir\BinaryTree\huffermanTree.c.s
+
+CMakeFiles/Data_Struture.dir/BinaryTree/maxHeap.c.obj: CMakeFiles/Data_Struture.dir/flags.make
+CMakeFiles/Data_Struture.dir/BinaryTree/maxHeap.c.obj: ../BinaryTree/maxHeap.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\OneDrive\OneDrive - mail.nwpu.edu.cn\Project\Data_Structure\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/Data_Struture.dir/BinaryTree/maxHeap.c.obj"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Data_Struture.dir\BinaryTree\maxHeap.c.obj   -c "E:\OneDrive\OneDrive - mail.nwpu.edu.cn\Project\Data_Structure\BinaryTree\maxHeap.c"
+
+CMakeFiles/Data_Struture.dir/BinaryTree/maxHeap.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Data_Struture.dir/BinaryTree/maxHeap.c.i"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "E:\OneDrive\OneDrive - mail.nwpu.edu.cn\Project\Data_Structure\BinaryTree\maxHeap.c" > CMakeFiles\Data_Struture.dir\BinaryTree\maxHeap.c.i
+
+CMakeFiles/Data_Struture.dir/BinaryTree/maxHeap.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Data_Struture.dir/BinaryTree/maxHeap.c.s"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "E:\OneDrive\OneDrive - mail.nwpu.edu.cn\Project\Data_Structure\BinaryTree\maxHeap.c" -o CMakeFiles\Data_Struture.dir\BinaryTree\maxHeap.c.s
+
 # Object files for target Data_Struture
 Data_Struture_OBJECTS = \
 "CMakeFiles/Data_Struture.dir/main.c.obj" \
@@ -365,7 +391,9 @@ Data_Struture_OBJECTS = \
 "CMakeFiles/Data_Struture.dir/Sort/sort.c.obj" \
 "CMakeFiles/Data_Struture.dir/Sort/WangDao7.c.obj" \
 "CMakeFiles/Data_Struture.dir/BinaryTree/BinaryTree.c.obj" \
-"CMakeFiles/Data_Struture.dir/BinaryTree/BinarySTree.c.obj"
+"CMakeFiles/Data_Struture.dir/BinaryTree/BinarySTree.c.obj" \
+"CMakeFiles/Data_Struture.dir/BinaryTree/huffermanTree.c.obj" \
+"CMakeFiles/Data_Struture.dir/BinaryTree/maxHeap.c.obj"
 
 # External object files for target Data_Struture
 Data_Struture_EXTERNAL_OBJECTS =
@@ -392,11 +420,13 @@ Data_Struture.exe: CMakeFiles/Data_Struture.dir/Sort/sort.c.obj
 Data_Struture.exe: CMakeFiles/Data_Struture.dir/Sort/WangDao7.c.obj
 Data_Struture.exe: CMakeFiles/Data_Struture.dir/BinaryTree/BinaryTree.c.obj
 Data_Struture.exe: CMakeFiles/Data_Struture.dir/BinaryTree/BinarySTree.c.obj
+Data_Struture.exe: CMakeFiles/Data_Struture.dir/BinaryTree/huffermanTree.c.obj
+Data_Struture.exe: CMakeFiles/Data_Struture.dir/BinaryTree/maxHeap.c.obj
 Data_Struture.exe: CMakeFiles/Data_Struture.dir/build.make
 Data_Struture.exe: CMakeFiles/Data_Struture.dir/linklibs.rsp
 Data_Struture.exe: CMakeFiles/Data_Struture.dir/objects1.rsp
 Data_Struture.exe: CMakeFiles/Data_Struture.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="E:\OneDrive\OneDrive - mail.nwpu.edu.cn\Project\Data_Structure\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_23) "Linking C executable Data_Struture.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="E:\OneDrive\OneDrive - mail.nwpu.edu.cn\Project\Data_Structure\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_25) "Linking C executable Data_Struture.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Data_Struture.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
