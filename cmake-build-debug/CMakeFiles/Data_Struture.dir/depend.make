@@ -14,6 +14,9 @@ CMakeFiles/Data_Struture.dir/BinaryTree/huffermanTree.c.obj: ../BinaryTree/huffe
 CMakeFiles/Data_Struture.dir/BinaryTree/maxHeap.c.obj: ../BinaryTree/maxHeap.c
 CMakeFiles/Data_Struture.dir/BinaryTree/maxHeap.c.obj: ../BinaryTree/maxHeap.h
 
+CMakeFiles/Data_Struture.dir/Graph/graph.c.obj: ../Graph/graph.c
+CMakeFiles/Data_Struture.dir/Graph/graph.c.obj: ../Graph/graph.h
+
 CMakeFiles/Data_Struture.dir/Linear_List/list.c.obj: ../Linear_List/list.c
 CMakeFiles/Data_Struture.dir/Linear_List/list.c.obj: ../Linear_List/list.h
 
@@ -91,5 +94,6 @@ CMakeFiles/Data_Struture.dir/String/String.c.obj: ../String/String.h
 CMakeFiles/Data_Struture.dir/main.c.obj: ../BinaryTree/BinarySTree.h
 CMakeFiles/Data_Struture.dir/main.c.obj: ../BinaryTree/BinaryTree.h
 CMakeFiles/Data_Struture.dir/main.c.obj: ../BinaryTree/maxHeap.h
+CMakeFiles/Data_Struture.dir/main.c.obj: ../Graph/graph.h
 CMakeFiles/Data_Struture.dir/main.c.obj: ../main.c
 

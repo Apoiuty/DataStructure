@@ -11,11 +11,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0783c046-d5ae-4a28-a58d-e007cf605800" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/BinaryTree/huffermanTree.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BinaryTree/huffermanTree.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BinaryTree/maxHeap.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BinaryTree/maxHeap.h" afterDir="false" />
+    <list default="true" id="0783c046-d5ae-4a28-a58d-e007cf605800" name="Default Changelist" comment="Huffman树编码;堆排序;">
+      <change afterPath="$PROJECT_DIR$/Graph/graph.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Graph/graph.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Struture.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Struture.dir/C.includecache" afterDir="false" />
@@ -95,7 +93,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="full.screen.before.presentation.mode" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Knowledge/Linux/Vim/code" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -106,6 +104,7 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
@@ -192,7 +191,11 @@
       <workItem from="1571119853513" duration="7439000" />
       <workItem from="1571141373728" duration="366000" />
       <workItem from="1571143594674" duration="9530000" />
-      <workItem from="1571198936059" duration="10818000" />
+      <workItem from="1571198936059" duration="13183000" />
+      <workItem from="1571292432801" duration="463000" />
+      <workItem from="1571292933185" duration="2170000" />
+      <workItem from="1571371010278" duration="40000" />
+      <workItem from="1571383245248" duration="12638000" />
     </task>
     <task id="LOCAL-00001" summary="折半插入排序;希尔排序;直接选择排序">
       <created>1569755677778</created>
@@ -278,7 +281,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571126075974</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Huffman树编码;堆排序;">
+      <created>1571216680009</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1571216680009</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -321,13 +331,23 @@
     <MESSAGE value="王道第四章11-20;" />
     <MESSAGE value="二叉树对称序线索化" />
     <MESSAGE value="平衡二叉树的插入操作" />
-    <option name="LAST_COMMIT_MESSAGE" value="平衡二叉树的插入操作" />
+    <MESSAGE value="Huffman树编码;堆排序;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Huffman树编码;堆排序;" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Graph/graph.c</url>
+          <line>200</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="CMakeRunConfiguration">
-        <watch expression="i" />
+        <watch expression="adj[j][j]" />
       </configuration>
     </watches-manager>
   </component>

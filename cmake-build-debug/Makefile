@@ -230,6 +230,33 @@ BinaryTree/maxHeap.c.s:
 	$(MAKE) -f CMakeFiles\Data_Struture.dir\build.make CMakeFiles/Data_Struture.dir/BinaryTree/maxHeap.c.s
 .PHONY : BinaryTree/maxHeap.c.s
 
+Graph/graph.obj: Graph/graph.c.obj
+
+.PHONY : Graph/graph.obj
+
+# target to build an object file
+Graph/graph.c.obj:
+	$(MAKE) -f CMakeFiles\Data_Struture.dir\build.make CMakeFiles/Data_Struture.dir/Graph/graph.c.obj
+.PHONY : Graph/graph.c.obj
+
+Graph/graph.i: Graph/graph.c.i
+
+.PHONY : Graph/graph.i
+
+# target to preprocess a source file
+Graph/graph.c.i:
+	$(MAKE) -f CMakeFiles\Data_Struture.dir\build.make CMakeFiles/Data_Struture.dir/Graph/graph.c.i
+.PHONY : Graph/graph.c.i
+
+Graph/graph.s: Graph/graph.c.s
+
+.PHONY : Graph/graph.s
+
+# target to generate assembly for a file
+Graph/graph.c.s:
+	$(MAKE) -f CMakeFiles\Data_Struture.dir\build.make CMakeFiles/Data_Struture.dir/Graph/graph.c.s
+.PHONY : Graph/graph.c.s
+
 Linear_List/list.obj: Linear_List/list.c.obj
 
 .PHONY : Linear_List/list.obj
@@ -791,6 +818,9 @@ help:
 	@echo ... BinaryTree/maxHeap.obj
 	@echo ... BinaryTree/maxHeap.i
 	@echo ... BinaryTree/maxHeap.s
+	@echo ... Graph/graph.obj
+	@echo ... Graph/graph.i
+	@echo ... Graph/graph.s
 	@echo ... Linear_List/list.obj
 	@echo ... Linear_List/list.i
 	@echo ... Linear_List/list.s
