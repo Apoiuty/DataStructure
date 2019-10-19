@@ -39,6 +39,16 @@ struct graph {
 
 typedef struct graph Graph;
 
+typedef struct aov {
+    int *cnt;
+//    各顶点的入度
+    Vertex *vertexlist;
+    int n;
+//    边的数量和顶点的数量
+    int n_vertex;
+    int n_edge;
+} AOV;
+
 /**
  * 返回定点i的数据信息
  * @param g 图
@@ -99,4 +109,9 @@ void DIJ(int k, int n, int adj[][n], path dist[]);
  */
 void Floyd(int n, int D[][n], int path[][n], int adj[][n]);
 
+/**
+ * 拓扑排序
+ * @param aov aov网
+ */
+void TopSort(AOV *aov);
 #endif //DATA_STRUCTURE_GRAPH_H

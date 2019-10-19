@@ -211,3 +211,43 @@ void Floyd(int n, int D[][n], int path[][n], int adj[][n]) {
 
     }
 }
+
+/**
+ * 拓扑排序
+ * @param aov aov网
+ */
+void TopSort(AOV *aov) {
+    int addcnt = 0;
+    int Toporder[15];
+    int top = -1, i, j;
+
+    for (i = 0; i < aov->n; i++) {
+        if (aov->cnt[i] == 0) {
+            aov->cnt[i] = top;
+            top = i;
+        }
+    }
+
+    Edge *p;
+    for (i = 0; i < aov->n; i++) {
+        if (top == -1) {
+            exit(1);
+        } else {
+            addcnt++;
+            j = top;
+            top = aov->cnt[top];
+            Toporder[i] = j + 1;
+            p = aov->vertexlist[j].out;
+            while (p) {
+                int k = p->jj;
+                if (--aov->cnt[k] == 0) {
+                    aov->cnt[top] = top;
+                    top = k;
+                }
+                p = p->next;
+
+            }
+
+        }
+    }
+}
