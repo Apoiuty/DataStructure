@@ -26,6 +26,7 @@ typedef struct Edge edge;
 //顶点的数据类型
 typedef struct vertex {
     int data;
+    int mark;
     Edge *out;
 } Vertex;
 
@@ -114,4 +115,43 @@ void Floyd(int n, int D[][n], int path[][n], int adj[][n]);
  * @param aov aov网
  */
 void TopSort(AOV *aov);
+
+/**
+ * 图的广度遍历算法
+ * @param g 图结构
+ */
+void BFS(Graph *g);
+
+/**
+ * 从相邻矩阵生成邻接表
+ * @param n 节点个数
+ * @param adj 相邻矩阵
+ * @return 返回邻接表表示的图
+ */
+Graph *Adj2Grapg(int n, int adj[][n]);
+
+
+/**
+ * 用DFS判断图中是否存在回路
+ * @param g 图
+ * @return 逻辑值
+ */
+int HaveLoop(Graph *g);
+
+/**
+ * DFS对图进行拓扑排序
+ * @param g 图
+ */
+void dfsTopSort(Graph *g);
+
+/**
+ * DFS对图进行拓扑排序
+ * @param g
+ * @param i
+ * @param visited
+ * @param time
+ * @param t
+ */
+void dfs_top_sort(Graph *g, int i, int visited[], int time[], int *t);
+
 #endif //DATA_STRUCTURE_GRAPH_H

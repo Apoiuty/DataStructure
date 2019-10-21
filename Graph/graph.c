@@ -10,6 +10,8 @@
 
 int ReturnNextValue(Graph *pGraph, int i, int next);
 
+int haveloop(Graph *g, int i, int visited[], int circle[]);
+
 /**
  * 返回定点i的数据信息
  * @param g 图
@@ -17,7 +19,7 @@ int ReturnNextValue(Graph *pGraph, int i, int next);
  * @return 数据信息
  */
 int ReturnValue(Graph *g, int i) {
-    if (i >= 0 && i < g->maxN) {
+    if (i >= 0 && i < g->num) {
         Edge *p = g->items[i].out;
         if (p) {
             return p->jj;
@@ -35,13 +37,15 @@ int ReturnValue(Graph *g, int i) {
  */
 void DFS(Graph *g) {
     int visited[g->maxN];
-    memset(visited, 0, sizeof(visited) * sizeof(int));
+    memset(visited, 0, sizeof(visited));
 
     for (int i = 0; i < g->num; ++i) {
         if (!visited[i]) {
+
             dfs(g, i, visited);
         }
     }
+    printf("\n");
 }
 
 /**
@@ -54,10 +58,11 @@ void dfs(Graph *g, int i, int visited[]) {
     int next;
     visited[i] = 1;
 
+    printf("%d ", g->items[i].data);
     next = ReturnValue(g, i);
     while (next != -1) {
-        if (!visited[next]) {
-            dfs(g, next, visited);
+        if (!visited[next - 1]) {
+            dfs(g, next - 1, visited);
         } else {
             next = ReturnNextValue(g, i, next);
         }
@@ -249,5 +254,243 @@ void TopSort(AOV *aov) {
             }
 
         }
+    }
+}
+
+/**
+ * 图的广度遍历算法
+ * @param g 图结构
+ */
+void BFS(Graph *g) {
+//    queue用来保存未访问的节点
+    Vertex queue[g->maxN];
+    int q_index = 0, q_top = 1;
+    int visited[g->num];
+    memset(visited, 0, sizeof(visited));
+
+    int next;
+    for (int i = 0; i < g->num;) {
+        if (!visited[i]) {
+//            将未访问节点入队
+            printf("%d ", g->items[i].data);
+            visited[i] = 1;
+            queue[q_index++] = g->items[i];
+//            将未访问节点的子节点入队
+        }
+        next = ReturnValue(g, i);
+        while (next != -1) {
+            next--;
+            if (!visited[next]) {
+                visited[next] = 1;
+                printf("%d ", g->items[next].data);
+                queue[q_index++] = g->items[next];
+            }
+            next = ReturnNextValue(g, i, next + 1);
+        }
+
+//        如果队列中还有元素, 则遍历队列
+        if (q_top < q_index)
+            i = queue[q_top++].data - 1;
+        else {
+            printf("|");
+            i = 0;
+            while (visited[i] == 1 && i < g->num)
+                i++;
+        }
+    }
+
+    printf("\n");
+
+//    int i;
+//    cur = g->items;
+//    while (cur) {
+//
+//        i = cur - g->items;
+//        if (visited[i] == 0) {
+//            visited[i] = 1;
+//            queue[q_index++] = *cur;
+//
+////            遍历其孩子节点
+//            next = cur->out;
+//            while (next) {
+//                i = next->jj;
+//                if (visited[i] == 0) {
+//                    visited[i] = 1;
+//                    queue[q_index++] = g->items[i];
+//                }
+//                next = next->next;
+//            }
+//        }
+//
+////        检查是否遍历完了
+//        if (q_top >= g->num)
+//            break;
+//
+//        if (q_top < q_index) {
+////            如果队列中有元素未遍历
+//            cur = &(queue[++q_top]);
+//        } else {
+//            i = 0;
+//            while (visited[i] == 1 && i < g->num)
+//                i++;
+//
+////            寻找未遍历节点
+//            if (i < g->num)
+//                cur = g->items + i;
+//            else
+//                break;
+//        }
+//    }
+}
+
+
+/**
+ * 从相邻矩阵生成邻接表
+ * @param n 节点个数
+ * @param adj 相邻矩阵
+ * @return 返回邻接表表示的图
+ */
+Graph *Adj2Grapg(int n, int adj[][n]) {
+    Graph *g;
+    g = (Graph *) malloc(sizeof(Graph));
+    g->num = g->maxN = n;
+    g->nEdge = 0;
+    g->maxEdge = n * (n - 1);
+
+    for (int i = 0; i < n; ++i) {
+        for (int j = 0; j < n; ++j) {
+            if (adj[i][j] > 0 && adj[i][j] < INT_MAX)
+                g->nEdge++;
+        }
+    }
+
+    Edge *new;
+    g->items = (Vertex *) malloc(sizeof(Vertex) * n);
+    for (int k = 0; k < n; ++k) {
+        g->items[k].data = k + 1;
+        g->items[k].out = NULL;
+        for (int i = 0; i < n; ++i) {
+            if (adj[k][i] > 0 && adj[k][i] < INT_MAX / 2) {
+                new = (Edge *) malloc(sizeof(Edge));
+                new->weight = adj[k][i];
+                new->jj = i + 1;
+                new->next = g->items[k].out;
+                g->items[k].out = new;
+            }
+        }
+    }
+
+    return g;
+
+}
+
+/**
+ * 用DFS判断图中是否存在回路
+ * @param g 图
+ * @return 逻辑值
+ */
+int HaveLoop(Graph *g) {
+    int visited[g->maxN];
+    int circle[g->maxN];
+    memset(visited, 0, sizeof(visited));
+    int flag = 0;
+
+    for (int i = 0; i < g->num; ++i) {
+        memset(circle, 0, sizeof(circle));
+        if (!visited[i]) {
+            circle[i] = 1;
+            flag = haveloop(g, i, visited, circle);
+        }
+        if (flag)
+            return 1;
+    }
+    return 0;
+}
+
+int haveloop(Graph *g, int i, int visited[], int circle[]) {
+    int Circle[g->maxN];
+    memcpy(Circle, circle, (int) sizeof(g->maxN) * sizeof(int));
+
+    int next, flag = 0;
+    next = ReturnValue(g, i);
+    while (next != -1) {
+        next--;
+        if (!visited[next]) {
+            visited[next] = 1;
+            Circle[next] = 1;
+            flag = haveloop(g, next, visited, Circle);
+            if (flag)
+                return 1;
+        } else if (Circle[next] == 1) {
+            return 1;
+        }
+
+        next = ReturnNextValue(g, i, next + 1);
+        memcpy(Circle, circle, (int) sizeof(g->maxN) * sizeof(int));
+
+    }
+
+    return 0;
+
+}
+
+
+/**
+ * DFS对图进行拓扑排序
+ * @param g 图
+ */
+void dfsTopSort(Graph *g) {
+    int visited[g->num];
+    int time[g->num];
+    int t = 0;
+
+    memset(visited, 0, sizeof(visited));
+    memset(time, 0, sizeof(time));
+
+    for (int i = 0; i < g->num; ++i) {
+        if (!visited[i]) {
+            dfs_top_sort(g, i, visited, time, &t);
+            time[i] = t;
+        }
+    }
+
+    int max = 0, index;
+    for (int j = 0; j < g->num; ++j) {
+        max = 0;
+        for (int i = 0; i < g->num; ++i) {
+            if (time[i] > max) {
+                max = time[i];
+                index = i;
+            }
+        }
+
+        time[index] = 0;
+        printf("%d ", index + 1);
+    }
+    printf("\n");
+}
+
+/**
+ * DFS对图进行拓扑排序
+ * @param g
+ * @param i
+ * @param visited
+ * @param time
+ * @param t
+ */
+void dfs_top_sort(Graph *g, int i, int visited[], int time[], int *t) {
+    visited[i] = 1;
+
+    int next;
+
+    next = ReturnValue(g, i);
+    while (next != -1) {
+        next--;
+        if (!visited[next]) {
+            dfs_top_sort(g, next, visited, time, t);
+            time[next] = ++(*t);
+        }
+
+        next = ReturnNextValue(g, i, next + 1);
     }
 }

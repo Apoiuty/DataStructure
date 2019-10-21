@@ -65,13 +65,3 @@ ElementType GetFront(Queue *Q) {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
