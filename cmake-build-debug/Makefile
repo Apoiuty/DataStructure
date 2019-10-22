@@ -230,6 +230,33 @@ BinaryTree/maxHeap.c.s:
 	$(MAKE) -f CMakeFiles\Data_Struture.dir\build.make CMakeFiles/Data_Struture.dir/BinaryTree/maxHeap.c.s
 .PHONY : BinaryTree/maxHeap.c.s
 
+Find/find.obj: Find/find.c.obj
+
+.PHONY : Find/find.obj
+
+# target to build an object file
+Find/find.c.obj:
+	$(MAKE) -f CMakeFiles\Data_Struture.dir\build.make CMakeFiles/Data_Struture.dir/Find/find.c.obj
+.PHONY : Find/find.c.obj
+
+Find/find.i: Find/find.c.i
+
+.PHONY : Find/find.i
+
+# target to preprocess a source file
+Find/find.c.i:
+	$(MAKE) -f CMakeFiles\Data_Struture.dir\build.make CMakeFiles/Data_Struture.dir/Find/find.c.i
+.PHONY : Find/find.c.i
+
+Find/find.s: Find/find.c.s
+
+.PHONY : Find/find.s
+
+# target to generate assembly for a file
+Find/find.c.s:
+	$(MAKE) -f CMakeFiles\Data_Struture.dir\build.make CMakeFiles/Data_Struture.dir/Find/find.c.s
+.PHONY : Find/find.c.s
+
 Graph/graph.obj: Graph/graph.c.obj
 
 .PHONY : Graph/graph.obj
@@ -818,6 +845,9 @@ help:
 	@echo ... BinaryTree/maxHeap.obj
 	@echo ... BinaryTree/maxHeap.i
 	@echo ... BinaryTree/maxHeap.s
+	@echo ... Find/find.obj
+	@echo ... Find/find.i
+	@echo ... Find/find.s
 	@echo ... Graph/graph.obj
 	@echo ... Graph/graph.i
 	@echo ... Graph/graph.s
