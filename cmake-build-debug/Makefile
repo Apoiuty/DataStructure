@@ -122,6 +122,33 @@ Data_Struture/fast:
 	$(MAKE) -f CMakeFiles\Data_Struture.dir\build.make CMakeFiles/Data_Struture.dir/build
 .PHONY : Data_Struture/fast
 
+Algorithm/algorithm.obj: Algorithm/algorithm.c.obj
+
+.PHONY : Algorithm/algorithm.obj
+
+# target to build an object file
+Algorithm/algorithm.c.obj:
+	$(MAKE) -f CMakeFiles\Data_Struture.dir\build.make CMakeFiles/Data_Struture.dir/Algorithm/algorithm.c.obj
+.PHONY : Algorithm/algorithm.c.obj
+
+Algorithm/algorithm.i: Algorithm/algorithm.c.i
+
+.PHONY : Algorithm/algorithm.i
+
+# target to preprocess a source file
+Algorithm/algorithm.c.i:
+	$(MAKE) -f CMakeFiles\Data_Struture.dir\build.make CMakeFiles/Data_Struture.dir/Algorithm/algorithm.c.i
+.PHONY : Algorithm/algorithm.c.i
+
+Algorithm/algorithm.s: Algorithm/algorithm.c.s
+
+.PHONY : Algorithm/algorithm.s
+
+# target to generate assembly for a file
+Algorithm/algorithm.c.s:
+	$(MAKE) -f CMakeFiles\Data_Struture.dir\build.make CMakeFiles/Data_Struture.dir/Algorithm/algorithm.c.s
+.PHONY : Algorithm/algorithm.c.s
+
 BinaryTree/BinarySTree.obj: BinaryTree/BinarySTree.c.obj
 
 .PHONY : BinaryTree/BinarySTree.obj
@@ -833,6 +860,9 @@ help:
 	@echo ... Data_Struture
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... Algorithm/algorithm.obj
+	@echo ... Algorithm/algorithm.i
+	@echo ... Algorithm/algorithm.s
 	@echo ... BinaryTree/BinarySTree.obj
 	@echo ... BinaryTree/BinarySTree.i
 	@echo ... BinaryTree/BinarySTree.s

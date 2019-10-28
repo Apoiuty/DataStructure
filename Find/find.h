@@ -43,4 +43,13 @@ int HashSearch(int *A, int key, int n);
  */
 int DHashSearch(int *A, int key, int n);
 
+/**
+ * find maximum of a and b
+ * @param a
+ * @param b
+ * @return
+ */
+int max(int a, int b);
+
+
 #endif //DATA_STRUCTURE_FIND_H

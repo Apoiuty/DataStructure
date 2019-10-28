@@ -16,7 +16,9 @@ int SeqSearch(const int A[], int key, int n) {
         if (A[i] == key)
             return i;
     }
+
     return -1;
+
 }
 
 
@@ -43,6 +45,7 @@ int BinarySearch(const int A[], int key, int n) {
             }
         }
     }
+
     return -1;
 }
 
@@ -76,6 +79,7 @@ int HashSearch(int *A, int key, int n) {
         A[k] = key;
         return -1;
     }
+
 
 }
 
@@ -113,3 +117,9 @@ int DHashSearch(int *A, int key, int n) {
         return -1;
     }
 }
+
+int max(int a, int b) {
+    return 0;
+}
+
+

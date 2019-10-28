@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Data_Struture.dir/Algorithm/algorithm.c.obj"
   "CMakeFiles/Data_Struture.dir/BinaryTree/BinarySTree.c.obj"
   "CMakeFiles/Data_Struture.dir/BinaryTree/BinaryTree.c.obj"
   "CMakeFiles/Data_Struture.dir/BinaryTree/huffermanTree.c.obj"

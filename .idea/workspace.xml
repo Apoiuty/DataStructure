@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
       <config projectName="Data_Structure" targetName="Data_Struture" />
@@ -12,22 +15,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0783c046-d5ae-4a28-a58d-e007cf605800" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Find/find.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Find/find.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Algorithm/algorithm.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Algorithm/algorithm.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Struture.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Struture.dir/C.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Find/find.c" beforeDir="false" afterPath="$PROJECT_DIR$/Find/find.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Find/find.h" beforeDir="false" afterPath="$PROJECT_DIR$/Find/find.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Struture.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Struture.dir/DependInfo.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Struture.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Struture.dir/build.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Struture.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Struture.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Struture.dir/main.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Struture.dir/main.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Struture.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Struture.dir/objects.a" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Struture.dir/objects1.rsp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Struture.dir/objects1.rsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Struture.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Struture.dir/progress.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Data_Structure.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Data_Structure.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Data_Struture.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Data_Struture.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -61,6 +65,13 @@
   </component>
   <component name="FavoritesManager">
     <favorites_list name="Data_Structure" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <favorite-branches>
@@ -108,7 +119,7 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.file-colors" />
+    <property name="settings.editor.selected.configurable" value="com.maddyhome.idea.vim.ui.VimEmulationConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -205,7 +216,15 @@
       <workItem from="1571580426061" duration="4811000" />
       <workItem from="1571625707223" duration="17027000" />
       <workItem from="1571667544861" duration="1149000" />
-      <workItem from="1571715009523" duration="3826000" />
+      <workItem from="1571715009523" duration="6726000" />
+      <workItem from="1571840070195" duration="4241000" />
+      <workItem from="1571921897361" duration="3223000" />
+      <workItem from="1571929964248" duration="70000" />
+      <workItem from="1571998157234" duration="3785000" />
+      <workItem from="1572002190623" duration="74000" />
+      <workItem from="1572002305629" duration="1044000" />
+      <workItem from="1572088438901" duration="4640000" />
+      <workItem from="1572235701471" duration="9426000" />
     </task>
     <task id="LOCAL-00001" summary="折半插入排序;希尔排序;直接选择排序">
       <created>1569755677778</created>
@@ -319,7 +338,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571651660051</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="课本查找算法">
+      <created>1571719551505</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1571719551505</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -366,7 +392,8 @@
     <MESSAGE value="Dijkstra算法;Floyd算法" />
     <MESSAGE value="拓扑排序" />
     <MESSAGE value="第九章课后习题" />
-    <option name="LAST_COMMIT_MESSAGE" value="第九章课后习题" />
+    <MESSAGE value="课本查找算法" />
+    <option name="LAST_COMMIT_MESSAGE" value="课本查找算法" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
